@@ -3,417 +3,77 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Payli — Pay at the table, for restaurants in Jordan</title>
-<meta name="description" content="Payli is pay-at-table software for restaurants in Jordan. Guests scan the QR on the table, see the itemised bill, split it, tip and pay from their own phone. Now in closed beta in Amman.">
-<meta name="theme-color" content="#061518">
+<title>Payli — five design options (website + PDF)</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/ClashDisplay-600.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/Switzer-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/JetBrainsMono-500.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="shared/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="shared/css/fonts.css">
+<style>
+:root{--teal:#043c44;--mint:#1ad9ad;--ink:#0a1a1d;--ink2:#5f7376;--line:rgba(11,73,82,.14)}
+*{box-sizing:border-box}body{margin:0;background:#f3f6f5;color:var(--ink);font:400 16px/1.5 "Switzer",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+header{padding:48px 0 24px}header img{height:32px}
+h1{font:600 clamp(30px,4vw,46px)/1.08 "Clash Display",sans-serif;letter-spacing:-.02em;color:var(--teal);margin:18px 0 10px}
+.lede{color:var(--ink2);max-width:70ch;font-size:17px}
+.how{margin:20px 0 0;padding:16px 20px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:14.5px;color:var(--ink2)}
+.how b{color:var(--ink)}
+.grid{display:grid;gap:22px;padding:28px 0 64px}
+.opt{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.opt .info{padding:26px 26px 24px;display:grid;gap:10px;align-content:start}
+.opt .n{font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#0e8e78}
+.opt h2{font:600 26px/1.1 "Clash Display",sans-serif;letter-spacing:-.015em;color:var(--teal);margin:0}
+.opt p{color:var(--ink2);font-size:14.5px;margin:0}
+.opt .feel{font-size:13px;color:var(--ink2)}.opt .feel b{color:var(--ink);font-weight:600}
+.acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.btn{display:inline-flex;align-items:center;height:40px;padding:0 16px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none}
+.b1{background:var(--teal);color:#fff}.b2{box-shadow:inset 0 0 0 1px var(--line);color:var(--teal)}
+.shot{position:relative;border-left:1px solid var(--line);background:#e8efec}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.shot a{position:absolute;inset:0}
+.shot span{position:absolute;left:12px;top:12px;font:500 10px/1 "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;padding:7px 9px;border-radius:6px;background:rgba(255,255,255,.9);color:var(--teal)}
+@media (max-width:900px){.opt{grid-template-columns:1fr}.shot{border-left:0;border-top:1px solid var(--line);aspect-ratio:16/10}}
+footer{padding:0 0 56px;color:var(--ink2);font-size:13px}
+</style>
 </head>
 <body>
-
-<header class="hdr">
-  <div class="wrap">
-    <a class="logo" href="#top" aria-label="Payli home"><img class="on-light" src="assets/img/logo.svg" alt="Payli" width="62" height="28"><img class="on-dark" src="assets/img/logo-dark.svg" alt="Payli" width="62" height="28"></a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#demo">Live demo</a>
-      <a href="#restaurants">For restaurants</a>
-      <a href="#value">Value</a>
-      <a href="#money">Money &amp; trust</a>
-      <a href="#integrations">Integrations</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-    <div class="hdr-cta">
-      <a class="btn btn-ghost" href="Payli-Company-Profile-EN.pdf" download>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M5 21h14"/></svg>Profile PDF</a>
-      <a class="btn btn-primary" href="#book">Book a demo</a>
-    </div>
-  </div>
+<header class="wrap">
+  <img src="shared/img/logo.svg" alt="Payli">
+  <h1>Five design directions for the Payli sales website and company profile.</h1>
+  <p class="lede">Each option is a matching pair: a website with the interactive pay-at-table demo, and a PDF company profile in the same style. The facts, claims and wording are identical in all five; only the design changes. Pick the direction you want, and that pair becomes the final version.</p>
+  <p class="how"><b>How to review:</b> open each website and scroll it on a laptop and on your phone, run the live demo (the "Auto-play" button narrates it), then open the PDF. All five PDFs were checked in three different PDF engines (Apple, Chrome and MuPDF) so they look the same in Preview, Chrome, Acrobat, mail apps and on phones.</p>
 </header>
+<main class="wrap grid">
 
-<main id="top">
+<article class="opt">
+  <div class="info"><span class="n">Option 01</span><h2>Luminous</h2><p>The dark, glowing deck look from the team's moodboard, refined: mint light fields, glass cards, floating product, a giant wordmark.</p><p class="feel"><b>Feels:</b> premium fintech, cinematic, confident. <b>Best for:</b> investors, launch events, screens in a dark room.</p><div class="acts"><a class="btn b1" href="01-luminous/index.html">Open website</a><a class="btn b2" href="01-luminous/Payli-Company-Profile-01-Luminous.pdf">Open PDF</a></div></div>
+  <div class="shot"><img src="shared/img/thumbs/site-01.jpg" alt=""><span>Website</span><a href="01-luminous/index.html" aria-label="Open option 1 website"></a></div>
+  <div class="shot"><img src="shared/img/thumbs/pdf-01.jpg" alt=""><span>PDF cover</span><a href="01-luminous/Payli-Company-Profile-01-Luminous.pdf" aria-label="Open option 1 PDF"></a></div>
+</article>
 
-<!-- HERO: spotlight / eclipse (inspo: ArgusVPN ring, Persona centred device + giant wordmark, Tradebox impact lines) -->
-<section class="hero2" id="hero">
-  <div class="beam" aria-hidden="true"></div>
-  <div class="ring" aria-hidden="true"></div>
-  <div class="wrap hero2-copy rv">
-    <span class="status"><span class="dot"></span>Now in closed beta · Amman, Jordan</span>
-    <h1>The bill comes to the table. <em>Nobody waits for it.</em></h1>
-    <p class="lede">Guests scan the QR on their table, see the itemised bill, split it, tip and pay from their own phone, in English or Arabic. Your floor sees every table live, your POS gets the sale, and every fils is on record.</p>
-    <div class="hero-cta">
-      <a class="btn btn-mint" href="#demo">Try the live demo
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-6-6l6 6-6 6"/></svg></a>
-      <a class="btn btn-ghost" href="#restaurants">What restaurants get</a>
-    </div>
-  </div>
-  <div class="stage" aria-hidden="true">
-    <div class="word">Payli</div>
-    <img class="stage-phone" src="assets/img/phone.webp" width="800" height="1205" alt="">
-    <span class="pill p1"><i></i>Split evenly, by item or any amount</span>
-    <span class="pill p2"><i></i>Payli takes no fee on tips</span>
-    <span class="pill p3"><i></i>Card details stay with the provider</span>
-    <span class="pill p4"><i></i>English · العربية</span>
-  </div>
-  <div class="impact">
-    <div class="arc" aria-hidden="true"></div>
-    <div class="wrap impact-row">
-      <div style="--h:150px"><span class="k">4</span><span class="l">steps: scan, split, tip, pay</span></div>
-      <div style="--h:210px"><span class="k">0</span><span class="l">apps for guests to download</span></div>
-      <div style="--h:250px"><span class="k">0</span><span class="l">fils Payli fee on tips</span></div>
-      <div style="--h:210px"><span class="k">.000</span><span class="l">every amount exact to the fils, in JOD</span></div>
-      <div style="--h:150px"><span class="k">2</span><span class="l">languages for every guest</span></div>
-    </div>
-  </div>
-</section>
+<article class="opt">
+  <div class="info"><span class="n">Option 02</span><h2>Editorial</h2><p>Light paper, magazine typography, hairline grids, numbered chapters and figure captions. Mint used once per page, as a highlighter.</p><p class="feel"><b>Feels:</b> calm, exact, trustworthy, printed. <b>Best for:</b> owners who read, finance teams, leave-behinds that get printed.</p><div class="acts"><a class="btn b1" href="02-editorial/index.html">Open website</a><a class="btn b2" href="02-editorial/Payli-Company-Profile-02-Editorial.pdf">Open PDF</a></div></div>
+  <div class="shot"><img src="shared/img/thumbs/site-02.jpg" alt=""><span>Website</span><a href="02-editorial/index.html" aria-label="Open option 2 website"></a></div>
+  <div class="shot"><img src="shared/img/thumbs/pdf-02.jpg" alt=""><span>PDF cover</span><a href="02-editorial/Payli-Company-Profile-02-Editorial.pdf" aria-label="Open option 2 PDF"></a></div>
+</article>
 
-<!-- PROBLEM -->
-<section class="sec" id="problem">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">[01] The problem</span>
-      <h2>The last five minutes of dinner are the slowest part of it.</h2>
-      <p class="lede">The meal is over, but the table isn't free. Everyone waits on the same few steps: get the check, bring the machine, work out who owes what.</p>
-    </div>
-    <div class="pain">
-      <article class="rv"><span class="ix">(01)</span><span class="who">For your guests</span><h3>Waiting to be allowed to leave</h3><p>Catching a server's eye, waiting for the check, waiting for the card machine, then doing arithmetic at the table.</p><p class="fix">They pay from their own phone the moment they're ready, and split it fairly in a few taps.</p></article>
-      <article class="rv"><span class="ix">(02)</span><span class="who">For your team</span><h3>Busy hands at the busiest moment</h3><p>Printing checks, walking terminals across the room and splitting bills by hand while new tables are waiting.</p><p class="fix">The floor board shows which tables are paying and paid, so staff stay on the floor.</p></article>
-      <article class="rv"><span class="ix">(03)</span><span class="who">For your business</span><h3>Tables held, slips to reconcile</h3><p>Seats stay occupied after the meal ends, and the day closes with a pile of slips to match against the bank.</p><p class="fix">Every bill, split and tip is recorded to the fils and exports as one clean file.</p></article>
-    </div>
-  </div>
-</section>
+<article class="opt">
+  <div class="info"><span class="n">Option 03</span><h2>Studio</h2><p>Product first: a soft grey canvas with white rounded tiles, the real screens as the hero, friendly type, quiet mint halos. In the spirit of an Apple product page.</p><p class="feel"><b>Feels:</b> clean, modern, approachable. <b>Best for:</b> showing the product itself; owners who want to see the software, not a pitch.</p><div class="acts"><a class="btn b1" href="03-studio/index.html">Open website</a><a class="btn b2" href="03-studio/Payli-Company-Profile-03-Studio.pdf">Open PDF</a></div></div>
+  <div class="shot"><img src="shared/img/thumbs/site-03.jpg" alt=""><span>Website</span><a href="03-studio/index.html" aria-label="Open option 3 website"></a></div>
+  <div class="shot"><img src="shared/img/thumbs/pdf-03.jpg" alt=""><span>PDF cover</span><a href="03-studio/Payli-Company-Profile-03-Studio.pdf" aria-label="Open option 3 PDF"></a></div>
+</article>
 
-<!-- DEMO -->
-<section class="sec dark" id="demo">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">[02] Live demo · try it</span>
-      <h2>Run a table from scan to settled.</h2>
-      <p class="lede">Tap through the guest's phone on the left. The restaurant's dashboard on the right updates as it happens: the floor, the payment, the POS sync and the record.</p>
-    </div>
+<article class="opt">
+  <div class="info"><span class="n">Option 04</span><h2>Blueprint</h2><p>A deep-teal drafting sheet: grid paper, mono labels, a system schematic, "failure modes" and "compatibility matrix" tables, a title block on every page.</p><p class="feel"><b>Feels:</b> engineered, precise, honest. <b>Best for:</b> operations and finance people, POS partners, anyone who asks "how does it actually work?"</p><div class="acts"><a class="btn b1" href="04-blueprint/index.html">Open website</a><a class="btn b2" href="04-blueprint/Payli-Company-Profile-04-Blueprint.pdf">Open PDF</a></div></div>
+  <div class="shot"><img src="shared/img/thumbs/site-04.jpg" alt=""><span>Website</span><a href="04-blueprint/index.html" aria-label="Open option 4 website"></a></div>
+  <div class="shot"><img src="shared/img/thumbs/pdf-04.jpg" alt=""><span>PDF cover</span><a href="04-blueprint/Payli-Company-Profile-04-Blueprint.pdf" aria-label="Open option 4 PDF"></a></div>
+</article>
 
-    <div class="demo-bar">
-      <div class="seg" role="group" aria-label="Guest language">
-        <button type="button" data-lang="en" aria-pressed="true">English</button>
-        <button type="button" data-lang="ar" aria-pressed="false" lang="ar">العربية</button>
-      </div>
-      <span class="spacer"></span>
-      <button type="button" class="ctl" id="autoplay"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5v14l12-7z"/></svg><span>Auto-play for presenting</span></button>
-      <button type="button" class="ctl" id="rest" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8m14 10v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg><span>Rest of the table pays</span></button>
-      <button type="button" class="ctl" id="reset"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 109-9 9.7 9.7 0 00-6.7 2.8L3 8m0-5v5h5"/></svg><span>Restart</span></button>
-    </div>
-
-    <div class="demo-grid">
-      <div class="guest-side">
-        <span class="side">[ The guest's side ]</span>
-        <div class="phone" aria-label="Guest phone (interactive)">
-          <div class="screen" id="screen" dir="ltr" lang="en">
-            <div class="island"></div>
-            <div class="sbar"><span>9:41</span><span class="ic"><i></i><i></i></span></div>
-            <!-- screens are rendered by demo.js -->
-            <div id="screens"></div>
-            <div class="sheet" id="sheet" dir="ltr" lang="en"></div>
-          </div>
-        </div>
-        <div class="narr" aria-live="polite"><span class="n" id="narrN">1/8</span><p id="narrT"></p></div>
-        <div class="tracker" id="tracker"></div>
-      </div>
-
-      <div class="board-side">
-      <span class="side">[ The restaurant's side ]</span>
-      <div class="board" aria-label="Restaurant dashboard (demo)">
-        <div class="bhead">
-          <img src="assets/img/logo.svg" alt="Payli">
-          <div class="t">Cedar &amp; Sage <small>Restaurant dashboard · tonight's floor</small></div>
-          <span class="live"><span class="dot"></span>Live</span>
-        </div>
-        <div class="bfloor">
-          <div class="blabel"><span>Live floor</span>
-            <span class="legend"><span><i style="background:var(--st-empty-fg)"></i>Empty</span><span><i style="background:var(--st-open-fg)"></i>Bill open</span><span><i style="background:var(--payli-mint)"></i>Paying now</span><span><i style="background:var(--st-paid-fg)"></i>Paid</span></span></div>
-          <div class="floor" id="floor"></div>
-        </div>
-        <div class="bgrid">
-          <div class="bcol">
-            <div class="t12">
-              <div class="hd"><b>Table 12</b><span class="badge open" id="t12badge">Bill open</span></div>
-              <div class="bar"><i id="t12bar"></i></div>
-              <div class="nums">
-                <div><small>Bill</small><span class="money" id="t12bill">45.298</span></div>
-                <div><small>Paid</small><span class="money" id="t12paid">0.000</span></div>
-                <div><small>Remaining</small><span class="money" id="t12rem">45.298</span></div>
-              </div>
-              <div class="sharelist" id="t12shares"></div>
-            </div>
-            <div class="blabel"><span>POS sync</span><span id="posState">Waiting</span></div>
-            <div class="sync" id="sync">
-              <div data-s="0"><i>POS → Payli</i>Menu &amp; prices</div>
-              <div data-s="1"><i>Payli → provider</i>Amount to charge</div>
-              <div data-s="2"><i>Provider → Payli</i>Payment approved</div>
-              <div data-s="3"><i>Payli → POS</i>Sale, tip &amp; tender</div>
-            </div>
-          </div>
-          <div class="bcol">
-            <div class="blabel"><span>Transactions</span><span id="feedCount">0 tonight</span></div>
-            <div class="feed" id="feed"><div class="empty">Payments appear here the moment the provider approves them.</div></div>
-            <div class="recon" id="recon"><span>Double-entry ledger</span><b id="reconV">—</b></div>
-            <div class="blabel"><span>Ratings</span></div>
-            <div id="reviews"><div class="feed"><div class="empty">Guests can rate their visit right after paying.</div></div></div>
-          </div>
-        </div>
-        <div class="bfoot"><span>Illustration · demo data · Cedar &amp; Sage is a fictional venue</span><span>Amounts in JOD, exact to the fils</span></div>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESTAURANTS -->
-<section class="sec" id="restaurants">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">[03] For restaurants and cafés</span>
-      <h2>Turn tables sooner. Close the day exact.</h2>
-      <p class="lede">One dashboard, in a web browser, for the floor, the menu, every payment and the end-of-day numbers. Payments settle straight to your own merchant account.</p>
-    </div>
-    <div class="ftabs">
-      <div class="tablist" role="tablist" aria-label="Restaurant features">
-        <button role="tab" aria-selected="true" aria-controls="tp-floor" id="tb-floor"><b>Live floor</b><small>Every table's state at a glance</small></button>
-        <button role="tab" aria-selected="false" aria-controls="tp-tx" id="tb-tx"><b>Transactions</b><small>Every payment, itemised</small></button>
-        <button role="tab" aria-selected="false" aria-controls="tp-recon" id="tb-recon"><b>Reconciliation</b><small>A ledger exact to the fils</small></button>
-        <button role="tab" aria-selected="false" aria-controls="tp-menu" id="tb-menu"><b>Menu manager</b><small>In step with your POS</small></button>
-        <button role="tab" aria-selected="false" aria-controls="tp-ratings" id="tb-ratings"><b>Ratings</b><small>Feedback while it's fresh</small></button>
-        <button role="tab" aria-selected="false" aria-controls="tp-cafes" id="tb-cafes"><b>For cafés</b><small>Keep the line moving</small></button>
-      </div>
-      <div>
-        <div class="tpanel active" role="tabpanel" id="tp-floor" aria-labelledby="tb-floor">
-          <h3>Every table's state, readable from across the room.</h3>
-          <p>A live board of your tables: which have a bill open, which are paying right now, which are paid and free again. It reads from two metres away on a tablet by the pass or a phone in an apron. Colour does the talking, so nobody has to stop and read.</p>
-          <div class="mini-floor" aria-hidden="true">
-            <div class="tbl paid"><span class="no">1</span><span class="st">Paid</span></div><div class="tbl open"><span class="no">2</span><span class="st">Bill open</span></div><div class="tbl paying"><span class="no">3</span><span class="st">Paying</span></div><div class="tbl empty"><span class="no">4</span><span class="st">Empty</span></div><div class="tbl open"><span class="no">5</span><span class="st">Bill open</span><span class="amt">1 of 3 paid</span></div><div class="tbl open"><span class="no">6</span><span class="st">Bill open</span></div>
-          </div>
-          <ul><li>Table states update as guests pay, without anyone refreshing</li><li>See how many people at a table are paying right now</li><li>Split tables stay open until the last share is paid</li><li>QR codes for every table, from the same screen</li><li>Works in any tablet, phone or laptop browser. No hardware to buy</li></ul>
-        </div>
-        <div class="tpanel" role="tabpanel" id="tp-tx" aria-labelledby="tb-tx">
-          <h3>Every payment, itemised, as it happens.</h3>
-          <p>Each payment appears with its table, bill, tip, total, method and time. Print a receipt for any of them, refund from the same screen, and export the day as a clean spreadsheet.</p>
-          <div class="shot"><img src="assets/img/dashboard-1200.webp" width="1200" height="896" alt="The financial transactions screen of the Payli restaurant dashboard" loading="lazy"></div>
-          <ul><li>Tips shown apart from sales, so the team's share is never guesswork</li><li>Refunds issued by your team, recorded with who and why, returned to the guest's original card</li><li>POS sync status for every paid bill, with a retry button</li><li>CSV export for your accountant</li></ul>
-        </div>
-        <div class="tpanel" role="tabpanel" id="tp-recon" aria-labelledby="tb-recon">
-          <h3>Your provider pays you. Payli shows you the match.</h3>
-          <p>Payments settle directly into your own merchant account on your merchant agreement's schedule. Payli never holds them. What Payli adds is the record: every bill, split, tip and refund in a double-entry ledger, exact to the fils, ready to match against what your provider settles.</p>
-          <ul><li>Double-entry and append-only: corrections are new entries, so the history always adds up</li><li>Amounts in Jordanian dinar to three decimal places, never rounded</li><li>Payli's fees are invoiced, never deducted from your payments</li></ul>
-        </div>
-        <div class="tpanel" role="tabpanel" id="tp-menu" aria-labelledby="tb-menu">
-          <h3>Your menu, in step with your POS.</h3>
-          <p>Import your menu from your POS instead of typing it twice, with names in English and Arabic. Adjust what guests see, such as prices, options and what's available tonight, from the dashboard.</p>
-          <ul><li>Imported from your POS catalogue where the integration supports it</li><li>Bilingual item names</li><li>Changes show on the table's bill straight away</li></ul>
-        </div>
-        <div class="tpanel" role="tabpanel" id="tp-ratings" aria-labelledby="tb-ratings">
-          <h3>A rating while the meal is still fresh.</h3>
-          <p>Right after paying, guests can rate their visit from one to five stars and leave a comment. Every rating, the glowing and the honest, lands in your dashboard, so you hear about the table while you can still do something about it.</p>
-          <ul><li>Asked at the moment of highest satisfaction, right after payment</li><li>Every comment kept with its table and time</li></ul>
-        </div>
-        <div class="tpanel" role="tabpanel" id="tp-cafes" aria-labelledby="tb-cafes">
-          <h3>Keep the line moving.</h3>
-          <p>When guests can pay from their seat, the queue at the till gets shorter and your team stays on the floor. The same QR, the same split and tip, the same record, sized for a quick coffee as much as a long dinner.</p>
-          <ul><li>One QR per table, as a sticker or on the bill folder</li><li>No app, no sign-up, no Wi-Fi password for guests</li></ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VALUE -->
-<section class="sec paper" id="value">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">[04] What changes on your floor</span>
-      <h2>Faster tables, freer staff, numbers that close.</h2>
-      <p class="lede">Every outcome below comes from something the product actually does. Ask us to show any of them in the demo.</p>
-    </div>
-    <div class="outcomes">
-      <article class="rv"><span class="ix">01</span><h3>Tables free up sooner</h3><p>Guests pay the moment they're ready instead of waiting for the check and the machine.</p><p class="how">QR on the table → live bill → pay</p></article>
-      <article class="rv"><span class="ix">02</span><h3>Staff stay on the floor</h3><p>No terminals walked across the room, no hand-split checks. The board shows who has paid.</p><p class="how">Live floor board</p></article>
-      <article class="rv"><span class="ix">03</span><h3>Splitting stops being a problem</h3><p>Evenly, by item or a custom amount. Service and tax follow the items, and nobody can pay twice.</p><p class="how">Proportional split, to the fils</p></article>
-      <article class="rv"><span class="ix">04</span><h3>Tips at the right moment</h3><p>5%, 10% or custom, asked while the service is fresh. The full tip goes to the restaurant.</p><p class="how">No Payli fee on tips</p></article>
-      <article class="rv"><span class="ix">05</span><h3>The day closes exact</h3><p>Every bill, split, tip and refund recorded and ready to match against your provider's settlement.</p><p class="how">Double-entry ledger · CSV</p></article>
-      <article class="rv"><span class="ix">06</span><h3>No re-keying at the till</h3><p>When the table is fully paid, the sale goes back to your POS with items, tax, service, tip and tender.</p><p class="how">POS connector (in development)</p></article>
-      <article class="rv"><span class="ix">07</span><h3>You hear about every table</h3><p>Ratings and comments arrive while the guest is still there to talk to.</p><p class="how">1–5 star rating after payment</p></article>
-      <article class="rv"><span class="ix">08</span><h3>Nothing to install or buy</h3><p>Guests use their own phones; your team uses the dashboard in a browser.</p><p class="how">No app · no hardware</p></article>
-    </div>
-
-    <div class="calc rv" id="calc">
-      <div class="in">
-        <span class="eyebrow">Estimate it with your numbers</span>
-        <h3>What are the last five minutes worth to you?</h3>
-        <div class="field"><label for="c-tables">Tables <output id="o-tables"></output></label><input type="range" id="c-tables" min="4" max="80" step="1" value="20"></div>
-        <div class="field"><label for="c-turns">Seatings per table on a busy night <output id="o-turns"></output></label><input type="range" id="c-turns" min="1" max="6" step="0.5" value="2"></div>
-        <div class="field"><label for="c-mins">Minutes saved per seating <output id="o-mins"></output></label><input type="range" id="c-mins" min="1" max="15" step="1" value="5"><small>Your own estimate of the wait between "we're done" and "we've paid".</small></div>
-        <div class="field"><label for="c-seat">Average seating length <output id="o-seat"></output></label><input type="range" id="c-seat" min="20" max="150" step="5" value="75"></div>
-        <div class="field"><label for="c-check">Average bill per table <output id="o-check"></output></label><input type="range" id="c-check" min="5" max="150" step="1" value="35"></div>
-        <div class="field"><label for="c-nights">Busy nights per month <output id="o-nights"></output></label><input type="range" id="c-nights" min="1" max="30" step="1" value="12"></div>
-      </div>
-      <div class="out" aria-live="polite">
-        <span class="eyebrow">On busy nights</span>
-        <div class="res"><small>Table time freed per night</small><span class="v" id="r-hours"></span><p>Minutes saved × seatings × tables</p></div>
-        <div class="res"><small>Extra seatings that time could hold, per month</small><span class="v" id="r-seats"></span><p>Freed time ÷ average seating length × busy nights</p></div>
-        <div class="res"><small>Revenue capacity of those seatings, per month</small><span class="v" id="r-rev"></span><p>Extra seatings × average bill</p></div>
-        <p class="disclaim">An illustration built only from the numbers you enter. It is capacity, not a forecast: it turns into revenue only on nights when guests are waiting for a table. Payli has no measured results from live restaurants yet.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MONEY -->
-<section class="sec dark" id="money">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">[05] How Payli handles money</span>
-      <h2>Payli is software. It never holds your money.</h2>
-      <p class="lede">Guests pay through a licensed payment provider, and the money settles directly into the restaurant's own merchant account. The restaurant is the merchant of record. Payli sits beside the payment, never in it.</p>
-    </div>
-    <div class="flow">
-      <div class="flowsvg rv" aria-label="Diagram: money flows from the guest through the licensed payment provider to the restaurant's account; Payli exchanges data only">
-        <svg viewBox="0 0 560 360" role="img">
-          <defs>
-            <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1ad9ad"/></marker>
-            <marker id="ad" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#8ba0a2"/></marker>
-          </defs>
-          <g font-family="Switzer,system-ui,sans-serif">
-            <rect x="10" y="40" width="140" height="74" rx="16" fill="#0b2226" stroke="rgba(230,240,238,.18)"/>
-            <text x="80" y="72" text-anchor="middle" fill="#e6f0ee" font-size="16" font-weight="600">Guest</text>
-            <text x="80" y="94" text-anchor="middle" fill="#8ba0a2" font-size="11">own phone, card or wallet</text>
-            <rect x="210" y="40" width="140" height="74" rx="16" fill="#0b2226" stroke="rgba(230,240,238,.18)"/>
-            <text x="280" y="66" text-anchor="middle" fill="#e6f0ee" font-size="14" font-weight="600">Licensed payment</text>
-            <text x="280" y="84" text-anchor="middle" fill="#e6f0ee" font-size="14" font-weight="600">provider</text>
-            <text x="280" y="102" text-anchor="middle" fill="#8ba0a2" font-size="11">hosted secure page</text>
-            <rect x="410" y="40" width="140" height="74" rx="16" fill="#043c44" stroke="#1ad9ad"/>
-            <text x="480" y="66" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">Restaurant's</text>
-            <text x="480" y="84" text-anchor="middle" fill="#fff" font-size="14" font-weight="600">merchant account</text>
-            <text x="480" y="102" text-anchor="middle" fill="#7feacb" font-size="11">merchant of record</text>
-            <path d="M152 77H206" stroke="#1ad9ad" stroke-width="2.5" marker-end="url(#ah)"/>
-            <path d="M352 77H406" stroke="#1ad9ad" stroke-width="2.5" marker-end="url(#ah)"/>
-            <circle r="4.5" fill="#1ad9ad"><animateMotion dur="2.6s" repeatCount="indefinite" path="M152 77H206 M352 77H406"/></circle>
-            <text x="280" y="22" text-anchor="middle" fill="#1ad9ad" font-size="11" font-family="JetBrains Mono,monospace" letter-spacing="1.2">MONEY</text>
-            <rect x="170" y="236" width="220" height="90" rx="18" fill="#061518" stroke="rgba(230,240,238,.18)" stroke-dasharray="5 5"/>
-            <image href="assets/img/logo-dark.svg" x="245" y="252" width="70" height="31"/>
-            <text x="280" y="306" text-anchor="middle" fill="#8ba0a2" font-size="11.5">the bill · the record · the POS sync</text>
-            <path d="M120 116C140 190 180 230 196 236" stroke="#8ba0a2" stroke-width="1.5" stroke-dasharray="4 5" fill="none" marker-end="url(#ad)"/>
-            <path d="M280 120V230" stroke="#8ba0a2" stroke-width="1.5" stroke-dasharray="4 5" fill="none" marker-end="url(#ad)"/>
-            <path d="M392 280C460 280 500 220 500 120" stroke="#8ba0a2" stroke-width="1.5" stroke-dasharray="4 5" fill="none" marker-end="url(#ad)"/>
-            <text x="280" y="350" text-anchor="middle" fill="#8ba0a2" font-size="11" font-family="JetBrains Mono,monospace" letter-spacing="1.2">DATA ONLY — NEVER MONEY</text>
-          </g>
-        </svg>
-      </div>
-      <div class="trust">
-        <article class="rv"><span class="ic"><img src="assets/img/ic-shield.svg" alt=""></span><div><h3>Card details never touch Payli</h3><p>Guests enter card details on the payment provider's own secure page. Payli never sees or stores the full card number or security code, and the guest's bank can ask for 3-D Secure as usual.</p></div></article>
-        <article class="rv"><span class="ic"><img src="assets/img/ic-bank.svg" alt=""></span><div><h3>Paid straight to you</h3><p>Each payment settles to your own merchant account on your merchant agreement's schedule. Refunds are returned by your provider to the guest's original card. Payli never funds or holds a refund.</p></div></article>
-        <article class="rv"><span class="ic"><img src="assets/img/ic-ledger.svg" alt=""></span><div><h3>Your numbers, exact to the fils</h3><p>Every bill, split and tip is recorded in a double-entry ledger, and exports as one clean file your accountant can use.</p></div></article>
-        <p class="honest rv"><b>Honest about the beta:</b> Payli itself hasn't yet been independently audited or certified, including against PCI DSS, and doesn't claim to be. Card data stays with the licensed provider.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INTEGRATIONS -->
-<section class="sec" id="integrations">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">[06] Integrations</span>
-      <h2>Works alongside the systems you already run.</h2>
-      <p class="lede">The bill comes from your POS, the payment goes through a licensed provider to your merchant account, and the finished sale lands back in your POS. Here is exactly where each connection stands.</p>
-    </div>
-    <div class="ints">
-      <div class="intcol rv">
-        <h3>Point of sale</h3>
-        <p>Each POS gets its own connector, built against that system and tested before it goes live at a restaurant.</p>
-        <div id="posList"></div>
-      </div>
-      <div class="intcol rv">
-        <h3>Payments</h3>
-        <p>Payments are processed by a licensed payment provider, not by Payli. The provider holds the licence; Payli does not.</p>
-        <div id="payList"></div>
-        <div class="methods" aria-label="Payment methods"><span>Visa</span><span>Mastercard</span><span>Apple Pay*</span><span>Google Pay*</span></div>
-        <p class="statusnote">* Where the provider enables them, always on the provider's own secure page.</p>
-      </div>
-    </div>
-    <p class="statusnote" id="statusNote"></p>
-  </div>
-</section>
-
-<!-- GO LIVE -->
-<section class="sec paper" id="start">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="eyebrow">[07] Getting started</span>
-      <h2>From a 15-minute demo to your first paid table.</h2>
-      <p class="lede">We're choosing a small first group of restaurants in Amman. Here's what joining looks like.</p>
-    </div>
-    <ol class="golive" id="golive"></ol>
-    <div class="need" id="need"></div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="sec" id="pricing">
-  <div class="wrap price">
-    <div class="rv">
-      <span class="eyebrow">[08] Commercials</span>
-      <h2 style="margin:14px 0 16px">Priced for your venue, and clear about who gets paid.</h2>
-      <p class="lede">Payli doesn't publish a price list. Pricing depends on your venue, and we walk you through it in the demo.</p>
-    </div>
-    <div class="plist rv">
-      <div><span class="k">0</span><p><b>Hardware to buy.</b> Guests pay on their own phones; your team uses the dashboard in a web browser.</p></div>
-      <div><span class="k">0</span><p><b>Fee on tips.</b> The full tip goes to the restaurant, which shares it with the team its own way.</p></div>
-      <div><span class="k">Direct</span><p><b>Payments settle to your own merchant account.</b> Payli's fees are invoiced separately, never deducted. Your provider's card fees follow your merchant agreement.</p></div>
-      <div><span class="k">15 min</span><p><b>To see it on your own phone.</b> A walkthrough of the guest's side and yours.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="sec paper" id="faq">
-  <div class="wrap">
-    <div class="sec-head rv"><span class="eyebrow">[09] Before you ask</span><h2>Questions restaurant owners ask.</h2></div>
-    <div class="faq" id="faqList"></div>
-  </div>
-</section>
-
-<!-- CLOSING -->
-<section class="sec" id="book">
-  <div class="wrap">
-    <div class="closing rv">
-      <div>
-        <span class="eyebrow" style="color:var(--payli-mint)">[10] Book a demo</span>
-        <h2 style="margin-top:14px">Bring Payli to your floor.</h2>
-        <p>We're choosing a small first group of restaurants in Amman. Book a 15-minute demo and see Payli on your own phone, with your own menu.</p>
-      </div>
-      <div class="acts">
-        <a class="btn btn-mint" href="mailto:info@payli.io?subject=Payli%20demo%20for%20our%20restaurant&amp;body=Restaurant%20name%3A%0AArea%3A%0ANumber%20of%20tables%3A%0APOS%20we%20use%3A%0APayment%20provider%3A%0ABest%20time%20to%20call%3A">Book a 15-minute demo</a>
-        <a class="btn btn-ghost" href="Payli-Company-Profile-EN.pdf" download>Download the company profile (PDF)</a>
-        <small>info@payli.io · +962 7 9953 8005 · Amman, Jordan</small>
-      </div>
-      <div class="closing-word" aria-hidden="true">Payli</div>
-    </div>
-  </div>
-</section>
+<article class="opt">
+  <div class="info"><span class="n">Option 05</span><h2>Poster</h2><p>Bold colour fields in Payli's mint, teal and cream, giant uppercase headlines, thick rules, stickers and marquee strips. A brand campaign rather than a brochure.</p><p class="feel"><b>Feels:</b> energetic, consumer, memorable. <b>Best for:</b> cafés and younger venues, social media, events, standing out in a crowded inbox.</p><div class="acts"><a class="btn b1" href="05-poster/index.html">Open website</a><a class="btn b2" href="05-poster/Payli-Company-Profile-05-Poster.pdf">Open PDF</a></div></div>
+  <div class="shot"><img src="shared/img/thumbs/site-05.jpg" alt=""><span>Website</span><a href="05-poster/index.html" aria-label="Open option 5 website"></a></div>
+  <div class="shot"><img src="shared/img/thumbs/pdf-05.jpg" alt=""><span>PDF cover</span><a href="05-poster/Payli-Company-Profile-05-Poster.pdf" aria-label="Open option 5 PDF"></a></div>
+</article>
 
 </main>
-
-<footer class="foot">
-  <div class="wrap">
-    <img src="assets/img/logo.svg" alt="Payli">
-    <span>Payli is software for restaurants. It never holds or moves money: payments are processed by licensed payment providers and settle directly to each restaurant's own merchant account.</span>
-    <span>Payli · a company registered in the Hashemite Kingdom of Jordan · Amman · <a href="mailto:info@payli.io">info@payli.io</a></span>
-  </div>
-</footer>
-
-<script src="assets/content.js"></script>
-<script src="assets/demo.js"></script>
+<footer class="wrap">All five use Payli's own brand (Clash Display, Switzer, JetBrains Mono; mint #1AD9AD and teal #043C44), real product screens and demo data. Cedar &amp; Sage is a fictional venue. Statuses as of November 2026.</footer>
 </body>
 </html>

@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Payli — Option 04 Blueprint</title>
+<meta name="description" content="Payli is pay-at-table software for restaurants in Jordan. Guests scan the QR on the table, see the itemised bill, split it, tip and pay from their own phone.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#043c44">
+<link rel="icon" href="../shared/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../shared/css/fonts.css">
+<link rel="stylesheet" href="../shared/css/demo-core.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Payli home"><img src="../shared/img/logo-dark.svg" alt="Payli"></a>
+    <nav class="nav" aria-label="Sections"><a href="#system">System</a><a href="#demo">Demo</a><a href="#modules">Modules</a><a href="#value">Value</a><a href="#money">Constraints</a><a href="#compat">Compatibility</a><a href="#faq">FAQ</a></nav>
+    <div class="hdr-cta"><a class="btn btn-line" href="Payli-Company-Profile-04-Blueprint.pdf" download>Spec sheet (PDF)</a><a class="btn btn-mint" href="#book">Book a demo</a></div>
+  </div>
+</header>
+<main id="top">
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="rv">
+      <span class="lbl">Spec 001 · Pay at the table · Rev 2026.11</span>
+      <h1>The bill comes to the table. <em>Nobody waits for it.</em></h1>
+      <p class="lede">Payli is pay-at-table software for restaurants in Jordan. Guests scan the QR code on the table, see the itemised bill, split it, tip and pay from their own phone. The restaurant gets a live floor, an exact record, and the sale posted back to its POS.</p>
+      <div class="params">
+        <div><b>Guest app required</b><span>NONE · BROWSER</span></div>
+        <div><b>Hardware to buy</b><span>NONE</span></div>
+        <div><b>Payli fee on tips</b><span>0.000 JOD</span></div>
+        <div><b>Amount precision</b><span>JOD · 3 DECIMALS</span></div>
+        <div><b>Guest languages</b><span>EN · AR</span></div>
+        <div><b>Status</b><span>CLOSED BETA · AMMAN</span></div>
+      </div>
+      <div class="cta"><a class="btn btn-mint" href="#demo">Run the demo <span class="k">→</span></a><a class="btn btn-line" href="#book">Book a 15-minute demo</a></div>
+    </div>
+    <div class="sheet draw rv"><i class="c1"></i><i class="c2"></i>
+      <span class="cross" aria-hidden="true"></span>
+      <img class="ph" src="../shared/img/flow-2.webp" alt="The split screen on a guest's phone">
+      <span class="dim d1">Fig. 01<br>Guest phone<br>split view</span>
+      <span class="dim d2">Share<br>JOD 22.649<br>of 45.298</span>
+      <span class="dim d3">Modes<br>Equal · item · custom</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="system">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="lbl">Fig. 02 · System diagram</span><h2>Payli sits between your POS and your payment provider. It carries data, never money.</h2></div>
+    <div class="sheet rv"><i class="c1"></i><i class="c2"></i>
+      <div class="schem">
+        <div class="box"><b>Your POS</b><span>Menu &amp; prices out<br>Paid sale in</span></div>
+        <span class="ln"><i>Data</i></span>
+        <div class="box me"><b>Payli</b><span>The bill · the record<br>The sync · the floor</span></div>
+        <span class="ln"><i>Amount only</i></span>
+        <div class="box"><b>Licensed provider</b><span>Hosted secure page<br>Card data stays here</span></div>
+        <span class="ln"><i>Money</i></span>
+        <div class="box out"><b>Your merchant account</b><span>Merchant of record<br>Settles on your schedule</span></div>
+      </div>
+      <div class="legend"><span><i></i>Data path</span><span><i class="s"></i>Money path (provider → you)</span><span>Payli never holds, pools or pays out funds</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="problem">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="lbl">Table 01 · Failure modes of the last five minutes</span><h2>Where the end of a meal breaks, and what Payli changes.</h2><p class="lede">The meal is over, but the table isn't free. Everyone waits on the same few steps: get the check, bring the machine, work out who owes what.</p></div>
+    <table class="spec rv">
+      <thead><tr><th>ID</th><th>Who</th><th class="hide">Failure mode</th><th>With Payli</th></tr></thead>
+      <tbody>
+        <tr><td class="id">FM-01</td><td><b>Guests</b>Waiting to be allowed to leave</td><td class="hide">Catching a server's eye, waiting for the check, waiting for the card machine, then doing arithmetic at the table.</td><td class="fix">They pay from their own phone the moment they're ready, and split it fairly in a few taps.</td></tr>
+        <tr class="hi"><td class="id">FM-02</td><td><b>Team</b>Busy hands at the busiest moment</td><td class="hide">Printing checks, walking terminals across the room and splitting bills by hand while new tables are waiting.</td><td class="fix">The floor board shows which tables are paying and paid, so staff stay on the floor.</td></tr>
+        <tr><td class="id">FM-03</td><td><b>Business</b>Tables held, slips to reconcile</td><td class="hide">Seats stay occupied after the meal ends, and the day closes with a pile of slips to match against the bank.</td><td class="fix">Every bill, split and tip is recorded to the fils and exports as one clean file.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec" id="demo">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="lbl">Fig. 03 · Interactive · Table 12 · Cedar &amp; Sage (fictional)</span><h2>Run a table from scan to settled.</h2><p class="lede">Tap through the guest's phone. The restaurant's dashboard updates as it happens: the floor, the payment, the POS sync and the record.</p></div>
+    <div class="sheet rv"><i class="c1"></i><i class="c2"></i><div id="demo-mount"></div></div>
+  </div>
+</section>
+
+<section class="sec" id="modules">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="lbl">Table 02 · Restaurant dashboard modules</span><h2>One dashboard runs the floor, the payments and the close.</h2></div>
+    <div class="mods">
+      <div class="modlist rv">
+        <div><span class="id">M-01</span><div><b>Live floor</b><p>Bill open, paying now, paid: readable from two metres, with QR codes for every table.</p></div></div>
+        <div><span class="id">M-02</span><div><b>Transactions</b><p>Table, bill, tip, total, method and time. Receipts, refunds with a reason, CSV export.</p></div></div>
+        <div><span class="id">M-03</span><div><b>Reconciliation</b><p>A double-entry, append-only ledger exact to the fils, ready to match your provider's settlement.</p></div></div>
+        <div><span class="id">M-04</span><div><b>Menu manager</b><p>Imported from your POS where the integration supports it, with Arabic item names.</p></div></div>
+        <div><span class="id">M-05</span><div><b>POS sync</b><p>The sync status of every paid bill, with a retry button.</p></div></div>
+        <div><span class="id">M-06</span><div><b>Ratings</b><p>Every rating and comment, with its table and time.</p></div></div>
+      </div>
+      <div class="sheet figframe rv"><i class="c1"></i><i class="c2"></i><img src="../shared/img/dashboard-1200.webp" alt="The financial transactions screen of the restaurant dashboard"><div class="cap"><span>Fig. 04 · M-02 Transactions · dashboard (English)</span><span>Demo data</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="value">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="lbl">Table 03 · Outcomes and the mechanism behind each</span><h2>Faster tables, freer staff, numbers that close.</h2><p class="lede">Every outcome comes from something the product does. Ask us to show any of them in the demo.</p></div>
+    <table class="spec rv">
+      <thead><tr><th>ID</th><th>Outcome</th><th class="hide">Mechanism</th></tr></thead>
+      <tbody>
+        <tr><td class="id">O-01</td><td><b>Tables free up sooner</b>Guests pay the moment they're ready, instead of waiting for the check and the card machine.</td><td class="hide mono">QR → LIVE BILL → SPLIT → PAY</td></tr>
+        <tr><td class="id">O-02</td><td><b>Staff stay on the floor</b>No terminals walked across the room, no hand-split checks. The board shows who has paid.</td><td class="hide mono">M-01 LIVE FLOOR</td></tr>
+        <tr><td class="id">O-03</td><td><b>Splitting stops being a problem</b>Evenly, by item or a custom amount. Service and tax follow the items; nobody pays twice.</td><td class="hide mono">PROPORTIONAL SPLIT · FILS-EXACT</td></tr>
+        <tr><td class="id">O-04</td><td><b>Tips at the right moment</b>Asked while the service is fresh. The full tip goes to the restaurant.</td><td class="hide mono">PAYLI FEE ON TIPS = 0</td></tr>
+        <tr><td class="id">O-05</td><td><b>The day closes exact</b>Every bill, split, tip and refund, ready to match against your provider's settlement.</td><td class="hide mono">M-03 LEDGER · CSV</td></tr>
+        <tr><td class="id">O-06</td><td><b>No re-keying at the till</b>When the table is fully paid, the sale goes back to your POS with items, tax, service, tip and tender.</td><td class="hide mono">POS CONNECTOR · IN DEVELOPMENT</td></tr>
+        <tr><td class="id">O-07</td><td><b>You hear about every table</b>Ratings and comments arrive while the guest is still there to talk to.</td><td class="hide mono">M-06 RATINGS</td></tr>
+      </tbody>
+    </table>
+    <div class="calc rv" id="calc">
+      <div class="in">
+        <span class="lbl">Worksheet W-01 · Your numbers</span><h3>What are the last five minutes worth to you?</h3>
+        <div class="field"><label for="c-tables">Tables <output id="o-tables"></output></label><input type="range" id="c-tables" min="4" max="80" step="1" value="20"></div>
+        <div class="field"><label for="c-turns">Seatings / table / busy night <output id="o-turns"></output></label><input type="range" id="c-turns" min="1" max="6" step="0.5" value="2"></div>
+        <div class="field"><label for="c-mins">Minutes saved / seating <output id="o-mins"></output></label><input type="range" id="c-mins" min="1" max="15" step="1" value="5"><small>Your own estimate of the wait between "we're done" and "we've paid".</small></div>
+        <div class="field"><label for="c-seat">Average seating length <output id="o-seat"></output></label><input type="range" id="c-seat" min="20" max="150" step="5" value="75"></div>
+        <div class="field"><label for="c-check">Average bill / table <output id="o-check"></output></label><input type="range" id="c-check" min="5" max="150" step="1" value="35"></div>
+        <div class="field"><label for="c-nights">Busy nights / month <output id="o-nights"></output></label><input type="range" id="c-nights" min="1" max="30" step="1" value="12"></div>
+      </div>
+      <div class="out" aria-live="polite">
+        <span class="lbl">Output</span>
+        <div class="res"><small>Table time freed / busy night</small><span class="v" id="r-hours"></span><p>Minutes saved × seatings × tables</p></div>
+        <div class="res"><small>Extra seatings / month</small><span class="v" id="r-seats"></span><p>Freed time ÷ average seating length × busy nights</p></div>
+        <div class="res"><small>Revenue capacity / month</small><span class="v" id="r-rev"></span><p>Extra seatings × average bill</p></div>
+        <p class="disclaim">An illustration built only from the numbers you enter. It is capacity, not a forecast: it turns into revenue only on nights when guests are waiting for a table. Payli has no measured results from live restaurants yet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="money">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="lbl">Table 04 · Constraints on money</span><h2>Payli is software. It never holds your money.</h2><p class="lede">Guests pay through a licensed payment provider, and the money settles directly into your own merchant account. You stay the merchant of record.</p></div>
+    <div class="cons rv">
+      <div><span class="id">C-01</span><b>Card details never touch Payli</b><p>Entered on the provider's own secure page. Payli never sees or stores the full card number or security code; 3-D Secure applies where the bank requires it.</p></div>
+      <div><span class="id">C-02</span><b>Refunds come from your provider</b><p>Your team starts a refund in the dashboard; the provider returns it to the guest's original card. Payli never funds or holds a refund.</p></div>
+      <div><span class="id">C-03</span><b>Fees invoiced, never deducted</b><p>Payli invoices its own fees separately and takes no fee on tips. Your provider's card fees follow your merchant agreement.</p></div>
+    </div>
+    <p class="honest rv"><b>Honest about the beta:</b> Payli is not a bank or a licensed payment company; the provider holds the licence. Payli hasn't yet been independently audited or certified, including against PCI DSS, and doesn't claim to be.</p>
+  </div>
+</section>
+
+<section class="sec" id="compat">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="lbl">Table 05 · Compatibility matrix · as of 2026.11</span><h2>Works alongside your POS and payment provider, and we're clear about what's ready.</h2></div>
+    <table class="spec rv">
+      <thead><tr><th>ID</th><th>System</th><th>Status</th><th class="hide">Connector</th></tr></thead>
+      <tbody>
+        <tr><td class="id">I-01</td><td><b>AQUA POS</b></td><td><span class="st build">In development</span></td><td class="hide">Imports your menu and posts every fully paid table back as a sale with items, tax, service and tip. Sale posting is being tested on AQUA's test server.</td></tr>
+        <tr><td class="id">I-02</td><td><b>Foodics</b></td><td><span class="st build">In development</span></td><td class="hide">Reads the live order on each table. Staff confirm the paid order in the Foodics cashier, using Foodics' own pay-at-table flow.</td></tr>
+        <tr><td class="id">I-03</td><td><b>POSRocket</b></td><td><span class="st">Planned</span></td><td class="hide">Planned together with Foodics, which acquired POSRocket.</td></tr>
+        <tr><td class="id">I-04</td><td><b>Oracle MICROS Simphony</b></td><td><span class="st">Planned</span></td><td class="hide">Designed to post each fully paid table as a check with its tender and tip.</td></tr>
+        <tr><td class="id">P-01</td><td><b>Licensed payment provider (Jordan)</b></td><td><span class="st test">In testing</span></td><td class="hide">Hosted secure page. Visa and Mastercard; Apple Pay and Google Pay where the provider enables them. CliQ not supported.</td></tr>
+      </tbody>
+    </table>
+    <div class="needs rv"><div><small>Point of sale</small>A POS Payli connects to, or one you'd like us to</div><div><small>Payments</small>A merchant account with a licensed provider</div><div><small>Devices</small>Any tablet, phone or laptop with a browser</div><div><small>Tables</small>A printed QR code for each table</div></div>
+    <p class="statusnote">IN DEVELOPMENT = BEING BUILT AND TESTED AGAINST THE VENDOR'S TEST SYSTEM; NOT YET LIVE AT ANY RESTAURANT. PLANNED = NOT BUILT YET.</p>
+  </div>
+</section>
+
+<section class="sec" id="start">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="lbl">Procedure P-01 · Onboarding</span><h2>From a 15-minute demo to your first paid table.</h2><p class="lede">We're choosing a small first group of restaurants in Amman.</p></div>
+    <ol class="proc rv">
+      <li><span class="id">STEP 01</span><b>See it on your phone</b><p>A 15-minute demo of the guest's side and yours.</p></li>
+      <li><span class="id">STEP 02</span><b>Check the fit</b><p>We confirm your POS, payment provider and what's ready for you.</p></li>
+      <li><span class="id">STEP 03</span><b>Set up your venue</b><p>We create your venue, connect your POS and bring in your menu.</p></li>
+      <li><span class="id">STEP 04</span><b>A QR on every table</b><p>Add your tables and print a QR code for each one.</p></li>
+      <li><span class="id">STEP 05</span><b>Brief the team</b><p>Floor board, receipts and refunds take minutes. Then your first tables pay.</p></li>
+    </ol>
+    <div class="comm rv">
+      <div><span class="k">0</span><p>Hardware to buy. Guests use their own phones; staff use a browser.</p></div>
+      <div><span class="k">0</span><p>Payli fee on tips. The full tip goes to the restaurant.</p></div>
+      <div><span class="k">Invoiced</span><p>Fees billed separately, never deducted from your payments.</p></div>
+      <div><span class="k">Per venue</span><p>No price list. Pricing depends on your venue; we walk you through it in the demo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="sec-head rv"><span class="lbl">Appendix A · Questions owners ask</span><h2>Answered plainly.</h2></div>
+    <div class="faq rv" id="faqList"></div>
+  </div>
+</section>
+
+<section class="closing" id="book">
+  <div class="wrap">
+    <div class="rv"><span class="lbl">Next step</span><h2 style="margin-top:14px">Bring Payli to your floor.</h2><p class="lede">Book a 15-minute demo and see Payli on your own phone, with your own menu.</p>
+      <div class="acts"><a class="btn btn-mint" href="mailto:info@payli.io?subject=Payli%20demo%20for%20our%20restaurant">Book a 15-minute demo</a><a class="btn btn-line" href="Payli-Company-Profile-04-Blueprint.pdf" download>Download the spec sheet (PDF)</a></div></div>
+    <div class="tblock rv">
+      <div><small>Project</small><b>Payli · Pay at the table</b></div><div><small>Revision</small><b>2026.11 · Closed beta</b></div>
+      <div><small>Email</small><b>info@payli.io</b></div><div><small>Phone</small><b>+962 7 9953 8005</b></div>
+      <div><small>Web</small><b>payli.io</b></div><div><small>Based in</small><b>Amman, Jordan</b></div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="foot"><div class="wrap"><img src="../shared/img/logo-dark.svg" alt="Payli"><span>Payli is software for restaurants. It never holds or moves money: payments are processed by licensed payment providers and settle directly to each restaurant's own merchant account.</span><span>A company registered in the Hashemite Kingdom of Jordan · Amman</span></div></footer>
+<script>window.PAYLI_IMG="../shared/img/";</script>
+<script src="../shared/js/content.js"></script>
+<script src="../shared/js/demo.js"></script>
+</body>
+</html>

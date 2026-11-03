@@ -1,0 +1,10 @@
+@font-face{font-family:"Clash Display";src:url(../fonts/ClashDisplay-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Clash Display";src:url(../fonts/ClashDisplay-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Clash Display";src:url(../fonts/ClashDisplay-700.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Switzer";src:url(../fonts/Switzer-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Switzer";src:url(../fonts/Switzer-500.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Switzer";src:url(../fonts/Switzer-600.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Switzer";src:url(../fonts/Switzer-700.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(../fonts/JetBrainsMono-400.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(../fonts/JetBrainsMono-500.woff2) format("woff2");font-weight:500 700;font-display:swap}
+@font-face{font-family:"Alexandria";src:url(../fonts/Alexandria-arabic.woff2) format("woff2");font-weight:100 900;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF}
