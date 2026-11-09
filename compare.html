@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Payli — round 2 side by side</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="shared/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="shared/css/fonts.css">
+<style>
+:root{--ink:#0a1a1d;--ink2:#5a6e71;--line:rgba(11,73,82,.14);--teal:#043c44;--bg:#eef2f1}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 "Switzer",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;padding:20px clamp(16px,3vw,32px)}
+.top a{color:var(--teal);font-weight:600;text-underline-offset:4px}
+.top img{height:26px;display:block}
+h1{font:600 clamp(22px,2.4vw,30px)/1.15 "Switzer",sans-serif;letter-spacing:-.02em;margin:0 clamp(16px,3vw,32px) 4px}
+.lede{margin:0 clamp(16px,3vw,32px) 20px;color:var(--ink2);max-width:72ch}
+.views{display:flex;gap:6px;margin:0 clamp(16px,3vw,32px) 18px}
+.views button{font:600 14px/1 "Switzer",sans-serif;border:0;border-radius:999px;padding:10px 16px;background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line);cursor:pointer}
+.views button[aria-pressed="true"]{background:var(--teal);color:#fff;box-shadow:none}
+button:focus-visible,a:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+.scroller{overflow-x:auto;padding:0 clamp(16px,3vw,32px) 48px}
+.cols{display:grid;grid-template-columns:repeat(5,minmax(240px,1fr));gap:16px;min-width:1240px}
+.col{display:grid;gap:12px;align-content:start}
+.col header{position:sticky;top:0;z-index:1;background:var(--bg);padding:6px 0 8px;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.col h2{margin:0;font:600 17px/1.2 "Switzer",sans-serif;letter-spacing:-.01em}
+.col h2 span{color:var(--ink2);font-weight:500;margin-right:6px;font-variant-numeric:tabular-nums}
+.col header a{font-size:13px;font-weight:600;color:var(--teal);white-space:nowrap;text-underline-offset:3px}
+figure{margin:0;border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#dfe6e4}
+figure img{display:block;width:100%;height:auto}
+.m figure{max-width:60%;border-radius:14px}
+[data-view] .v{display:none}
+[data-view="first"] .v-first,[data-view="page"] .v-page{display:grid;gap:12px}
+footer{padding:0 clamp(16px,3vw,32px) 40px;color:var(--ink2);font-size:13px}
+</style>
+</head>
+<body>
+<div class="top"><a href="index.html" aria-label="Back to all design directions"><img src="shared/img/logo.svg" alt="Payli"></a><a href="index.html">All design directions</a></div>
+<main data-view="first" id="main">
+  <h1>Round 2, side by side</h1>
+  <p class="lede">The five new directions at the same scale. Rendered in a real browser at 1440 px (laptop) and 390 px (phone). Select a column title to open that website.</p>
+  <div class="views" role="group" aria-label="What to compare">
+    <button type="button" data-set="first" aria-pressed="true">First screen</button>
+    <button type="button" data-set="page" aria-pressed="false">Whole page</button>
+  </div>
+  <div class="scroller">
+    <div class="cols">
+      <section class="col" aria-labelledby="c06"><header><h2 id="c06"><span>06</span>Quiet Precision</h2><a href="06-quiet-precision/index.html">Open</a></header>
+        <div class="v v-first"><figure><img src="shared/img/thumbs/round2/06-desktop.jpg" alt="06 on a laptop, first screen" width="1200" height="750"></figure><div class="m"><figure><img src="shared/img/thumbs/round2/06-mobile.jpg" alt="06 on a phone, first screen" width="390" height="844"></figure></div></div>
+        <div class="v v-page"><figure><img src="shared/img/thumbs/round2/06-page.jpg" alt="06, the whole page on a laptop" loading="lazy"></figure></div></section>
+      <section class="col" aria-labelledby="c07"><header><h2 id="c07"><span>07</span>The Hospitality Edit</h2><a href="07-hospitality-edit/index.html">Open</a></header>
+        <div class="v v-first"><figure><img src="shared/img/thumbs/round2/07-desktop.jpg" alt="07 on a laptop, first screen" width="1200" height="750"></figure><div class="m"><figure><img src="shared/img/thumbs/round2/07-mobile.jpg" alt="07 on a phone, first screen" width="390" height="844"></figure></div></div>
+        <div class="v v-page"><figure><img src="shared/img/thumbs/round2/07-page.jpg" alt="07, the whole page on a laptop" loading="lazy"></figure></div></section>
+      <section class="col" aria-labelledby="c08"><header><h2 id="c08"><span>08</span>The Guest Journey</h2><a href="08-guest-journey/index.html">Open</a></header>
+        <div class="v v-first"><figure><img src="shared/img/thumbs/round2/08-desktop.jpg" alt="08 on a laptop, first screen" width="1200" height="750"></figure><div class="m"><figure><img src="shared/img/thumbs/round2/08-mobile.jpg" alt="08 on a phone, first screen" width="390" height="844"></figure></div></div>
+        <div class="v v-page"><figure><img src="shared/img/thumbs/round2/08-page.jpg" alt="08, the whole page on a laptop" loading="lazy"></figure></div></section>
+      <section class="col" aria-labelledby="c09"><header><h2 id="c09"><span>09</span>The Service Blueprint</h2><a href="09-service-blueprint/index.html">Open</a></header>
+        <div class="v v-first"><figure><img src="shared/img/thumbs/round2/09-desktop.jpg" alt="09 on a laptop, first screen" width="1200" height="750"></figure><div class="m"><figure><img src="shared/img/thumbs/round2/09-mobile.jpg" alt="09 on a phone, first screen" width="390" height="844"></figure></div></div>
+        <div class="v v-page"><figure><img src="shared/img/thumbs/round2/09-page.jpg" alt="09, the whole page on a laptop" loading="lazy"></figure></div></section>
+      <section class="col" aria-labelledby="c10"><header><h2 id="c10"><span>10</span>After Hours</h2><a href="10-after-hours/index.html">Open</a></header>
+        <div class="v v-first"><figure><img src="shared/img/thumbs/round2/10-desktop.jpg" alt="10 on a laptop, first screen" width="1200" height="750"></figure><div class="m"><figure><img src="shared/img/thumbs/round2/10-mobile.jpg" alt="10 on a phone, first screen" width="390" height="844"></figure></div></div>
+        <div class="v v-page"><figure><img src="shared/img/thumbs/round2/10-page.jpg" alt="10, the whole page on a laptop" loading="lazy"></figure></div></section>
+    </div>
+  </div>
+</main>
+<footer>Motion is shown at rest. 08 is a pinned scroll sequence, so its whole-page view shows the same content stacked (its reduced-motion layout); open the website to see it play.</footer>
+<script>
+document.querySelectorAll('[data-set]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.getElementById('main').dataset.view = b.dataset.set;
+    document.querySelectorAll('[data-set]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+  });
+});
+</script>
+</body>
+</html>

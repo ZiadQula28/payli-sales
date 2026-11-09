@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Payli: pay-at-table software for restaurants</title>
+<meta name="description" content="Payli puts the itemised bill on the guest's own phone. They scan the QR on the table, then split, tip and pay in the browser.">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="../shared/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="../shared/css/fonts.css">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<span class="scroll-probe" aria-hidden="true"></span>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <svg class="logo" viewBox="0 0 116 52" width="49" height="22" role="img" aria-label="Payli" fill="currentColor">
+      <path d="M20.6168 7.32822C24.7884 7.32822 28.1309 9.38755 29.9491 13.0769C32.3824 17.9706 31.4733 24.5744 27.7828 28.853C26.0986 30.7783 22.782 33.4786 17.2744 33.4786C15.8572 33.4786 14.3059 33.2916 12.5947 32.8905C12.5677 36.3129 12.0337 39.2814 10.7224 41.1525C9.46517 42.9178 7.8351 43.5329 5.72167 43.5329C2.19223 43.2918 0 39.0944 0 32.5694C0.02705 27.2747 1.63124 20.4828 5.4547 15.2692C4.83961 12.9429 4.25156 11.0976 3.82347 10.0814L7.91508 8.31613C8.15618 8.87713 8.55723 10.0003 8.98415 11.4986C12.2196 8.85125 16.4182 7.32704 20.6157 7.32704L20.6168 7.32822ZM6.87306 21.6071C5.66993 24.2545 5.10775 26.7948 4.86783 28.1579C3.77172 34.5758 5.18891 38.7204 6.04392 39.0944C6.55199 39.1214 6.79309 38.9874 7.08711 38.5863C8.90535 35.966 8.18323 28.399 6.87306 21.6071ZM25.9645 15.0551C25.2153 13.558 23.6653 11.7927 20.6698 11.7927C16.7122 11.7927 12.9958 13.4768 10.2943 16.3653C11.1505 19.9218 11.9785 24.1733 12.3795 28.2109C14.0907 28.746 15.722 28.9859 17.1921 28.9859C20.1864 28.9859 22.6738 27.9427 24.4121 25.9375C26.9254 23.0231 27.5946 18.3435 25.9633 15.0551H25.9645Z"/>
+      <path d="M32.9799 32.0884C32.9799 27.2747 36.5634 24.2804 42.7132 23.7993L50.9493 23.1572V22.408C50.9493 18.0224 48.329 16.4723 44.7996 16.4723C40.5751 16.4723 38.1676 18.3446 38.1676 21.4989H33.782C33.782 16.0442 38.2746 12.4607 45.0124 12.4607C51.7503 12.4607 55.8689 15.8831 55.8689 22.9431V39.3613H51.5903L51.0552 35.1368C49.718 38.1312 46.1344 40.0035 41.9099 40.0035C36.2941 40.0035 32.9787 36.848 32.9787 32.0884H32.9799ZM51.0034 28.0768V26.6866L44.3185 27.2218C39.88 27.6498 38.0618 29.3611 38.0618 31.9285C38.0618 34.7099 40.094 36.1 43.3565 36.1C48.1161 36.1 51.0046 32.9987 51.0046 28.0779L51.0034 28.0768Z"/>
+      <path d="M57.5813 46.9554H60.9508C63.3571 46.9554 65.2824 46.5814 66.5125 43.2648L67.4217 40.7515L56.8863 13.2098H62.181L69.775 34.2806L77.5301 13.2098H82.7179L70.3642 45.2441C68.5989 49.7368 65.9786 51.608 61.9681 51.608C60.3099 51.608 58.9197 51.3939 57.5825 51.0728V46.9554H57.5813Z"/>
+      <path d="M85.2347 39.3613V0H90.2613V39.3613H85.2347Z"/>
+      <path d="M93.4038 3.69058C93.4038 1.81824 94.901 0.375183 96.7192 0.375183C98.5374 0.375183 100.035 1.81942 100.035 3.69058C100.035 5.56174 98.5374 7.00597 96.7192 7.00597C94.901 7.00597 93.4038 5.50881 93.4038 3.69058ZM94.2588 13.2098H99.2854V39.3614H94.2588V13.2098Z"/>
+      <path d="M108.365 1.52588e-05H111.532V0.535134H110.243V4.29627H109.661V0.535134H108.366V1.52588e-05H108.365Z"/>
+      <path d="M111.888 4.29625V0H112.459L113.938 3.61295L115.418 0H116V4.29625H115.43V2.5968C115.43 1.79471 115.435 1.50304 115.465 1.20079L114.211 4.29625H113.664L112.416 1.21255C112.446 1.42072 112.458 1.86057 112.458 2.46038V4.29625H111.887H111.888Z"/>
+    </svg>
+    <a class="btn btn--nav" href="mailto:info@payli.io?subject=Payli%20demo">Book a demo</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 1 · Hero -->
+  <section class="s s--hero" aria-labelledby="h1">
+    <div class="wrap grid hero">
+      <div class="hero__text">
+        <h1 id="h1" class="t-display">Their phone is the bill folder.</h1>
+        <p class="t-body hero__sub">Payli puts the itemised bill on the guest's own phone. They scan the QR on the table, then split, tip and pay in the browser.<span class="bl" data-bl="sub-last"></span></p>
+      </div>
+
+      <figure class="phone phone--light phone--hero" data-align="hero" role="img" aria-label="Guest's phone showing the bill for table 12 at Cedar &amp; Sage, a fictional venue">
+        <span class="phone__key phone__key--action"></span><span class="phone__key phone__key--up"></span><span class="phone__key phone__key--down"></span><span class="phone__key phone__key--power"></span>
+        <div class="screen screen--bill" aria-hidden="true">
+          <span class="island"></span>
+          <span class="lang" lang="ar" dir="rtl">العربية</span>
+          <div class="bill">
+            <div class="brand">
+              <span class="brand__mono">CS</span>
+              <div class="brand__txt">
+                <p class="brand__name">Cedar &amp; Sage</p>
+                <p class="brand__table">Table 12</p>
+              </div>
+            </div>
+            <p class="bill__lead">Whenever you're ready, here's your table.</p>
+            <div class="lines">
+              <div class="line">
+                <img class="line__photo" src="assets/dish-cookies.webp" alt="" width="160" height="160" decoding="async">
+                <div class="line__main"><p class="line__name">Crushed cookies</p><p class="line__sub"><span class="qty">2×</span><span class="mono">7.500</span></p></div>
+                <span class="line__price mono">15.000</span>
+              </div>
+              <div class="line">
+                <img class="line__photo" src="assets/dish-latte.webp" alt="" width="160" height="160" decoding="async">
+                <div class="line__main"><p class="line__name">Spanish ice latte</p><p class="line__sub"><span class="qty">1×</span><span class="mono">5.250</span></p></div>
+                <span class="line__price mono">5.250</span>
+              </div>
+              <div class="line">
+                <img class="line__photo" src="assets/dish-eggs-greens.webp" alt="" width="160" height="160" decoding="async">
+                <div class="line__main"><p class="line__name">Eggs &amp; greens skillet</p><p class="line__sub"><span class="qty">1×</span><span class="mono">6.500</span></p></div>
+                <span class="line__price mono">6.500</span>
+              </div>
+              <div class="line line--paid">
+                <img class="line__photo" src="assets/dish-avocado.webp" alt="" width="160" height="160" decoding="async">
+                <div class="line__main"><p class="line__name">Avocado toast</p><p class="line__sub"><span>Already paid</span></p></div>
+                <span class="line__price mono"><span class="bl" data-bl="price"></span>8.750</span>
+              </div>
+            </div>
+            <div class="bill__rule"></div>
+            <div class="totals">
+              <p class="totals__row"><span>Subtotal</span><span class="mono">35.500</span></p>
+              <p class="totals__row"><span>Service charge (10%)</span><span class="mono">3.550</span></p>
+              <p class="totals__row"><span>Tax</span><span class="mono">6.248</span></p>
+              <div class="totals__div"></div>
+              <p class="totals__row totals__row--ink"><span>Bill total</span><span class="mono">45.298</span></p>
+              <p class="totals__row"><span>Already paid</span><span class="mono">20.735</span></p>
+            </div>
+          </div>
+          <div class="dock">
+            <span class="cta cta--teal">Pay remaining<span class="cta__amt"> · <span class="mono"><span class="cur">JOD</span>24.563</span></span></span>
+            <span class="cta cta--ghost">Split the bill</span>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 2 · Split (macro) -->
+  <section class="s s--split" aria-labelledby="h-split">
+    <div class="wrap grid split">
+      <div class="split__text">
+        <h2 id="h-split" class="t-heading">Split evenly, by item or any amount.</h2>
+        <p class="t-body">Service and tax follow each item in proportion. The table stays open until the last share is paid.</p>
+      </div>
+      <div class="split__band">
+        <figure class="phone phone--light phone--macro" role="img" aria-label="Detail of the split screen: your share is JOD 22.649, split equally between two people">
+          <span class="phone__key phone__key--action"></span><span class="phone__key phone__key--up"></span><span class="phone__key phone__key--down"></span><span class="phone__key phone__key--power"></span>
+          <div class="screen screen--split" aria-hidden="true">
+            <span class="island"></span>
+            <span class="back"><svg viewBox="0 0 9 16" fill="none"><path d="M8 1 1 8l7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</span>
+            <span class="lang" lang="ar" dir="rtl">العربية</span>
+            <div class="sp">
+              <p class="sp__ctx">Cedar &amp; Sage · Table 12</p>
+              <p class="sp__title">Split the bill</p>
+              <p class="sp__sub">Pay for exactly what you had — or divide it.</p>
+              <div class="share">
+                <p class="share__lbl">Your share</p>
+                <p class="share__fig mono"><span class="cur">JOD</span>22.649</p>
+                <p class="share__note">Service &amp; tax are shared in proportion to your items.</p>
+              </div>
+              <div class="modes">
+                <div class="mode mode--on"><p class="mode__t">Equally</p><p class="mode__s">Divide evenly</p></div>
+                <div class="mode"><p class="mode__t">By item</p><p class="mode__s">What you had</p></div>
+                <div class="mode"><p class="mode__t">Custom</p><p class="mode__s">An amount</p></div>
+              </div>
+              <div class="twin">
+                <div class="twin__row">
+                  <div><p class="twin__t">People at your table</p><p class="twin__s">How many are sharing</p></div>
+                  <div class="stepper"><span class="step">–</span><span class="stepper__n">2</span><span class="step step--add">+</span></div>
+                </div>
+                <div class="twin__row">
+                  <div><p class="twin__t">You pay for</p><p class="twin__s">Cover yourself or others</p></div>
+                  <div class="stepper"><span class="step step--off">–</span><span class="stepper__n">1</span><span class="step step--add">+</span></div>
+                </div>
+              </div>
+              <p class="propnote">Service fee &amp; tax are distributed proportionally</p>
+            </div>
+            <div class="dock">
+              <span class="cta cta--dark">Continue to tip<span class="cta__amt"> · <span class="mono"><span class="cur">JOD</span>22.649</span></span></span>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Pay (Night) -->
+  <section class="s s--night" id="night" aria-labelledby="h-night">
+    <div class="wrap grid night">
+      <div class="night__text" data-align="night">
+        <h2 id="h-night" class="t-heading night__h">Payli is software.<br> It never holds<br> your money.</h2>
+        <p class="t-body night__body">A licensed provider takes each payment on its own secure page and settles it to your own merchant account. Card details go to the provider, not to Payli. Our fees are invoiced separately, and there is no Payli fee on tips.<span class="bl" data-bl="night-last"></span></p>
+      </div>
+      <figure class="phone phone--dark phone--pay" role="img" aria-label="Guest's phone on the dark payment screen: you're paying JOD 22.649, with a Pay by card button">
+        <span class="phone__key phone__key--action"></span><span class="phone__key phone__key--up"></span><span class="phone__key phone__key--down"></span><span class="phone__key phone__key--power"></span>
+        <div class="screen screen--pay" aria-hidden="true">
+          <span class="island"></span>
+          <span class="back back--dark"><svg viewBox="0 0 9 16" fill="none"><path d="M8 1 1 8l7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Back</span>
+          <div class="pay">
+            <p class="pay__lbl">You're paying</p>
+            <p class="pay__fig mono"><span class="cur">JOD</span>22.649</p>
+            <p class="pay__merchant">Cedar &amp; Sage · Table 12</p>
+            <div class="pay__card">
+              <p class="pay__row"><span>Your share</span><span class="mono">22.649</span></p>
+              <p class="pay__row"><span>Tip</span><span class="mono">0.000</span></p>
+              <div class="pay__rule"></div>
+              <p class="pay__row pay__row--total"><span><span class="bl" data-bl="total"></span>Total</span><span class="mono"><span class="cur">JOD</span>22.649</span></p>
+            </div>
+          </div>
+          <div class="wallet">
+            <span class="pay__btn">Pay by card</span>
+            <p class="pay__secure"><span class="dot"></span>Card details go to our payment provider, never to Payli</p>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4 · Record -->
+  <section class="s s--record" aria-labelledby="h-record">
+    <div class="wrap grid record">
+      <div class="record__text">
+        <h2 id="h-record" class="t-heading">Exact to the fils.</h2>
+        <p class="t-body">A live floor, every payment on record, and the sale posted to your POS only once the table is fully paid.</p>
+      </div>
+      <div class="record__fig">
+        <img src="assets/dashboard-table.webp" width="1461" height="777" loading="lazy" decoding="async" alt="The restaurant dashboard's transactions table: each payment by table, with bill, tip, total, method and time, for example Table 12, 22.649, tip 0.000, total 22.649, by card at 19:27.">
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · Statement -->
+  <section class="s s--statement" aria-labelledby="h-statement">
+    <div class="wrap statement">
+      <h2 id="h-statement" class="t-statement"><span>No app.</span> <span>No hardware.</span></h2>
+      <p class="t-body statement__small">English or <span class="ar" lang="ar" dir="rtl">العربية</span>, chosen by the guest.</p>
+    </div>
+  </section>
+
+  <!-- 6 · Closing -->
+  <section class="s s--close" aria-labelledby="h-close">
+    <div class="close__photo">
+      <img src="assets/plate-white-1000.webp" srcset="assets/plate-white-1000.webp 1000w, assets/plate-white.webp 2000w" sizes="(min-width: 960px) 50vw, 100vw" width="2000" height="1500" loading="lazy" decoding="async" alt="A single composed plate, white on white: braised meat on greens with hazelnuts, a swoosh and a dot of black sauce.">
+    </div>
+    <div class="wrap grid close">
+      <div class="close__text">
+        <h2 id="h-close" class="t-heading">See it on your own menu in 15 minutes.</h2>
+        <p class="t-body">We're in closed beta in Amman and choosing our first restaurants.</p>
+        <div class="close__actions">
+          <a class="btn btn--lg" href="mailto:info@payli.io?subject=Payli%20demo">Book a demo</a>
+          <a class="tel" href="tel:+962799538005">+962 7 9953 8005</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__legal">
+      <p>Payli is in closed beta in Amman. No restaurant is live yet.</p>
+      <p>Cedar &amp; Sage is a fictional venue used for illustration.</p>
+      <p>Payli is registered in the Hashemite Kingdom of Jordan.</p>
+    </div>
+    <ul class="foot__links">
+      <li><a href="mailto:info@payli.io">info@payli.io</a></li>
+      <li><a href="tel:+962799538005">+962 7 9953 8005</a></li>
+      <li><a href="https://payli.io">payli.io</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

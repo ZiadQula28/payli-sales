@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Payli — five design options (website + PDF)</title>
+<title>Payli — website design directions</title>
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="shared/img/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="shared/css/fonts.css">
@@ -12,14 +12,14 @@
 *{box-sizing:border-box}body{margin:0;background:#f3f6f5;color:var(--ink);font:400 16px/1.5 "Switzer",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
 header{padding:48px 0 24px}header img{height:32px}
-h1{font:600 clamp(30px,4vw,46px)/1.08 "Clash Display",sans-serif;letter-spacing:-.02em;color:var(--teal);margin:18px 0 10px}
+h1{font:600 clamp(30px,4vw,46px)/1.08 "Switzer",sans-serif;letter-spacing:-.025em;color:var(--ink);margin:18px 0 10px}
 .lede{color:var(--ink2);max-width:70ch;font-size:17px}
 .how{margin:20px 0 0;padding:16px 20px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:14.5px;color:var(--ink2)}
 .how b{color:var(--ink)}
 .grid{display:grid;gap:22px;padding:28px 0 64px}
 .opt{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
 .opt .info{padding:26px 26px 24px;display:grid;gap:10px;align-content:start}
-.opt .n{font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#0e8e78}
+.opt .n{font:500 11px/1 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#0a7362}
 .opt h2{font:600 26px/1.1 "Clash Display",sans-serif;letter-spacing:-.015em;color:var(--teal);margin:0}
 .opt p{color:var(--ink2);font-size:14.5px;margin:0}
 .opt .feel{font-size:13px;color:var(--ink2)}.opt .feel b{color:var(--ink);font-weight:600}
@@ -32,16 +32,78 @@ h1{font:600 clamp(30px,4vw,46px)/1.08 "Clash Display",sans-serif;letter-spacing:
 .shot span{position:absolute;left:12px;top:12px;font:500 10px/1 "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;padding:7px 9px;border-radius:6px;background:rgba(255,255,255,.9);color:var(--teal)}
 @media (max-width:900px){.opt{grid-template-columns:1fr}.shot{border-left:0;border-top:1px solid var(--line);aspect-ratio:16/10}}
 footer{padding:0 0 56px;color:var(--ink2);font-size:13px}
+/* round 2 */
+.round{padding-top:8px}
+.r1 summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:40px 0 6px}
+.r1 summary::-webkit-details-marker{display:none}
+.r1 summary h2{font:600 clamp(20px,2vw,24px)/1.15 "Switzer",sans-serif;letter-spacing:-.015em;color:var(--ink2);margin:0}
+.r1 summary span{font-size:14px;font-weight:600;color:var(--teal);text-decoration:underline;text-underline-offset:4px}
+.r1[open] summary span::after{content:" (hide)"}
+.r1 summary:focus-visible{outline:2px solid var(--teal);outline-offset:4px;border-radius:4px}
+.round>h2{font:600 clamp(24px,2.6vw,32px)/1.1 "Switzer",sans-serif;letter-spacing:-.02em;color:var(--ink);margin:40px 0 6px}
+.round>p{color:var(--ink2);max-width:68ch;margin:0}
+.round>p a{color:var(--teal);font-weight:600}
+.r2{list-style:none;margin:28px 0 24px;padding:0;display:grid;gap:0}
+.r2 li{display:grid;grid-template-columns:minmax(220px,1fr) 2.4fr .62fr;gap:24px;align-items:start;padding:28px 0;border-top:1px solid var(--line)}
+.r2 li:last-child{border-bottom:1px solid var(--line)}
+.r2 .t{display:grid;gap:8px;align-content:start}
+.r2 .num{font-size:13px;color:var(--ink2);font-variant-numeric:tabular-nums}
+.r2 h3{margin:0;font:600 24px/1.1 "Switzer",sans-serif;letter-spacing:-.02em}
+.r2 h3 a{color:var(--ink);text-decoration:none}
+.r2 h3 a:hover{text-decoration:underline;text-underline-offset:4px}
+.r2 .t p{margin:0;color:var(--ink2);font-size:14.5px}
+.r2 .open{justify-self:start;margin-top:6px;font-weight:600;font-size:14px;color:var(--teal);text-underline-offset:4px}
+.r2 figure{margin:0;position:relative;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#e8efec}
+.r2 figure img{display:block;width:100%;height:auto}
+.r2 .m{border-radius:16px}
+.r2 figure a{position:absolute;inset:0}
+a:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px}
+@media (max-width:900px){.r2 li{grid-template-columns:1fr 1fr}.r2 .t{grid-column:1/-1}.r2 .d{grid-column:1/-1}.r2 .m{grid-column:1/2;max-width:220px}}
 </style>
 </head>
 <body>
 <header class="wrap">
   <img src="shared/img/logo.svg" alt="Payli">
-  <h1>Five design directions for the Payli sales website and company profile.</h1>
-  <p class="lede">Each option is a matching pair: a website with the interactive pay-at-table demo, and a PDF company profile in the same style. The facts, claims and wording are identical in all five; only the design changes. Pick the direction you want, and that pair becomes the final version.</p>
-  <p class="how"><b>How to review:</b> open each website and scroll it on a laptop and on your phone, run the live demo (the "Auto-play" button narrates it), then open the PDF. All five PDFs were checked in three different PDF engines (Apple, Chrome and MuPDF) so they look the same in Preview, Chrome, Acrobat, mail apps and on phones.</p>
+  <h1>Design directions for the Payli website.</h1>
+  <p class="lede">Round 2 (06–10) answers management's feedback on round 1: cleaner, quieter, fewer words, and more care in every detail, for premium restaurant groups and partners. Each is a complete website with its own identity. Round 1 (01–05) is kept below for reference.</p>
 </header>
-<main class="wrap grid">
+<main>
+<section class="wrap round" aria-labelledby="r2h">
+  <h2 id="r2h">Round 2: five new directions</h2>
+  <p>Same verified facts, five different ideas. Open each on a laptop and on a phone, or <a href="compare.html">compare all five side by side</a>.</p>
+  <ol class="r2">
+    <li>
+      <div class="t"><span class="num">06</span><h3><a href="06-quiet-precision/index.html">Quiet Precision</a></h3><p>The phone as a crafted object on true white, shown at three scales: cut by the fold, as a macro detail, and whole on the product's own dark. Six spreads, one idea each.</p><a class="open" href="06-quiet-precision/index.html">Open website</a></div>
+      <figure class="d"><img src="shared/img/thumbs/round2/06-desktop.jpg" alt="Theme 06, first screen on a laptop" width="1200" height="750" loading="lazy"><a href="06-quiet-precision/index.html" aria-label="Open theme 06 website"></a></figure>
+      <figure class="m"><img src="shared/img/thumbs/round2/06-mobile.jpg" alt="Theme 06, first screen on a phone" width="390" height="844" loading="lazy"><a href="06-quiet-precision/index.html" aria-label="Open theme 06 website on its own"></a></figure>
+    </li>
+    <li>
+      <div class="t"><span class="num">07</span><h3><a href="07-hospitality-edit/index.html">The Hospitality Edit</a></h3><p>A short photo essay about how a good dinner ends: daylight rooms and service, a quiet serif, and the product laid on the table like a bill folder.</p><a class="open" href="07-hospitality-edit/index.html">Open website</a></div>
+      <figure class="d"><img src="shared/img/thumbs/round2/07-desktop.jpg" alt="Theme 07, first screen on a laptop" width="1200" height="750" loading="lazy"><a href="07-hospitality-edit/index.html" aria-label="Open theme 07 website"></a></figure>
+      <figure class="m"><img src="shared/img/thumbs/round2/07-mobile.jpg" alt="Theme 07, first screen on a phone" width="390" height="844" loading="lazy"><a href="07-hospitality-edit/index.html" aria-label="Open theme 07 website on its own"></a></figure>
+    </li>
+    <li>
+      <div class="t"><span class="num">08</span><h3><a href="08-guest-journey/index.html">The Guest Journey</a></h3><p>Follow one bill. As you scroll, a single phone moves through the real guest screens while table 12 on the restaurant's floor turns to Paid.</p><a class="open" href="08-guest-journey/index.html">Open website</a></div>
+      <figure class="d"><img src="shared/img/thumbs/round2/08-desktop.jpg" alt="Theme 08, first screen on a laptop" width="1200" height="750" loading="lazy"><a href="08-guest-journey/index.html" aria-label="Open theme 08 website"></a></figure>
+      <figure class="m"><img src="shared/img/thumbs/round2/08-mobile.jpg" alt="Theme 08, first screen on a phone" width="390" height="844" loading="lazy"><a href="08-guest-journey/index.html" aria-label="Open theme 08 website on its own"></a></figure>
+    </li>
+    <li>
+      <div class="t"><span class="num">09</span><h3><a href="09-service-blueprint/index.html">The Service Blueprint</a></h3><p>The restaurant drawn as an architect would: a living floor plan whose tables change state, and one clear diagram of where the money goes.</p><a class="open" href="09-service-blueprint/index.html">Open website</a></div>
+      <figure class="d"><img src="shared/img/thumbs/round2/09-desktop.jpg" alt="Theme 09, first screen on a laptop" width="1200" height="750" loading="lazy"><a href="09-service-blueprint/index.html" aria-label="Open theme 09 website"></a></figure>
+      <figure class="m"><img src="shared/img/thumbs/round2/09-mobile.jpg" alt="Theme 09, first screen on a phone" width="390" height="844" loading="lazy"><a href="09-service-blueprint/index.html" aria-label="Open theme 09 website on its own"></a></figure>
+    </li>
+    <li>
+      <div class="t"><span class="num">10</span><h3><a href="10-after-hours/index.html">After Hours</a></h3><p>A short film of a restaurant at 11 pm: warm night photography, small wide type, and the guest's phone as the only light at the table.</p><a class="open" href="10-after-hours/index.html">Open website</a></div>
+      <figure class="d"><img src="shared/img/thumbs/round2/10-desktop.jpg" alt="Theme 10, first screen on a laptop" width="1200" height="750" loading="lazy"><a href="10-after-hours/index.html" aria-label="Open theme 10 website"></a></figure>
+      <figure class="m"><img src="shared/img/thumbs/round2/10-mobile.jpg" alt="Theme 10, first screen on a phone" width="390" height="844" loading="lazy"><a href="10-after-hours/index.html" aria-label="Open theme 10 website on its own"></a></figure>
+    </li>
+  </ol>
+</section>
+<section class="wrap round" aria-labelledby="r1h">
+  <details class="r1">
+  <summary><h2 id="r1h">Round 1: website and PDF pairs (for reference)</h2><span>Show round 1</span></summary>
+  <p class="how"><b>How to review:</b> open each website and scroll it on a laptop and on your phone, run the live demo (the "Auto-play" button narrates it), then open the PDF. All five PDFs were checked in three different PDF engines (Apple, Chrome and MuPDF) so they look the same in Preview, Chrome, Acrobat, mail apps and on phones.</p>
+<div class="grid">
 
 <article class="opt">
   <div class="info"><span class="n">Option 01</span><h2>Luminous</h2><p>The dark, glowing deck look from the team's moodboard, refined: mint light fields, glass cards, floating product, a giant wordmark.</p><p class="feel"><b>Feels:</b> premium fintech, cinematic, confident. <b>Best for:</b> investors, launch events, screens in a dark room.</p><div class="acts"><a class="btn b1" href="01-luminous/index.html">Open website</a><a class="btn b2" href="01-luminous/Payli-Company-Profile-01-Luminous.pdf">Open PDF</a></div></div>
@@ -73,7 +135,10 @@ footer{padding:0 0 56px;color:var(--ink2);font-size:13px}
   <div class="shot"><img src="shared/img/thumbs/pdf-05.jpg" alt=""><span>PDF cover</span><a href="05-poster/Payli-Company-Profile-05-Poster.pdf" aria-label="Open option 5 PDF"></a></div>
 </article>
 
+</div>
+  </details>
+</section>
 </main>
-<footer class="wrap">All five use Payli's own brand (Clash Display, Switzer, JetBrains Mono; mint #1AD9AD and teal #043C44), real product screens and demo data. Cedar &amp; Sage is a fictional venue. Statuses as of November 2026.</footer>
+<footer class="wrap">Every direction uses the real Payli logo, real product screens and verified facts only. Round 1 uses Payli's brand fonts and colours throughout; round 2 keeps them inside the product and gives each website its own typography and palette. Round 2 photography is licensed from Unsplash (see ASSET_SOURCES.md). Cedar &amp; Sage is a fictional venue. Payli is in closed beta in Amman; no restaurant is live yet. Statuses as of November 2026.</footer>
 </body>
 </html>

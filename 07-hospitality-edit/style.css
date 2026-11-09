@@ -1,0 +1,773 @@
+/* ==========================================================================
+   Payli · Theme 07 · The Hospitality Edit (revision 2)
+   A short photo essay about how a good dinner ends.
+   Mobile first. Desktop composition from 900 px; full spec from 1280 px.
+   ========================================================================== */
+
+:root {
+  /* palette (spec 2.4) */
+  --cloth: #F7F8F5;
+  --bottle: #1B2A24;
+  --sage: #56635C;
+  --sage-on-celadon: #46524C;
+  --celadon: #D9E3DC;
+  --claret: #6B1F2E;
+  --claret-dk: #551624;
+  --white: #FFFFFF;
+
+  --serif: "Erode", "Iowan Old Style", Georgia, serif;
+  --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+
+  /* layout */
+  --m: 20px;          /* outer margin */
+  --g: 16px;          /* gutter */
+  --rhythm: 96px;     /* space between sections */
+
+  /* type (mobile values; larger screens below) */
+  --fs-h1: 48px;
+  --fs-pull: 36px;
+  --fs-h2: 32px;
+  --fs-body: 16px;
+  --fs-cap: 15px;
+  --fs-small: 13px;
+  --fs-cta: 15px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--cloth);
+  color: var(--bottle);
+  font-family: var(--sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+h1, h2, p, figure, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+img { display: block; max-width: 100%; }
+
+/* --------------------------------------------------------------------------
+   Type roles
+   -------------------------------------------------------------------------- */
+
+.opening__title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--fs-h1);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  color: var(--bottle);
+}
+
+.h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: var(--fs-h2);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  color: var(--bottle);
+  text-wrap: balance;
+}
+
+.pull {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--fs-pull);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--bottle);
+  text-wrap: balance;
+}
+
+.body {
+  font-family: var(--sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  color: var(--sage);
+  max-width: 440px;
+  text-wrap: pretty;
+}
+
+.h2 + .body { margin-top: 24px; }
+
+.caption {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: var(--fs-cap);
+  line-height: 1.4;
+  color: var(--sage);
+}
+
+.ar {
+  font-family: "Alexandria", var(--sans);
+  font-size: 0.92em;
+}
+
+/* --------------------------------------------------------------------------
+   Links, button, focus (the only places Claret appears)
+   -------------------------------------------------------------------------- */
+
+.link {
+  color: var(--claret);
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: var(--fs-small);
+  letter-spacing: 0.005em;
+  line-height: 1.4;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.28em;
+  transition: text-decoration-thickness 160ms ease;
+}
+.link:hover { text-decoration-thickness: 2px; }
+
+.button {
+  display: inline-block;
+  padding: 17px 28px 18px;
+  background: var(--claret);
+  color: var(--white);
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: var(--fs-small);
+  letter-spacing: 0.005em;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background-color 160ms ease;
+}
+.button:hover { background: var(--claret-dk); }
+
+a:focus-visible {
+  outline: 2px solid var(--claret);
+  outline-offset: 3px;
+}
+a:focus:not(:focus-visible) { outline: none; }
+
+/* --------------------------------------------------------------------------
+   Masthead (static; scrolls away). Logo with the email beneath, one plain
+   action on the right.
+   -------------------------------------------------------------------------- */
+
+.mast__in {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 18px var(--m) 0;
+}
+.mast__id { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.logo {
+  display: block;
+  width: auto;
+  height: 24px;
+  color: var(--bottle);
+}
+.mast__cta { font-size: var(--fs-cta); margin-top: 2px; }
+
+/* --------------------------------------------------------------------------
+   Photographs: square corners, the shared daylight grade is in the files
+   -------------------------------------------------------------------------- */
+
+.photo { position: relative; overflow: hidden; background: #E6EAE6; }
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   Sections, mobile composition
+   -------------------------------------------------------------------------- */
+
+main > * + * { margin-top: var(--rhythm); }
+
+/* 1. Opening */
+.opening { padding-top: 28px; }
+.opening__title { padding: 0 var(--m); }
+.opening__title span { display: inline; }
+.opening__title span:nth-child(2)::after { content: "\A"; white-space: pre; }
+.opening__photo {
+  margin: 28px 0 0 40px;
+  aspect-ratio: 4 / 5;
+}
+.opening__photo img { object-position: 50% 60%; }
+.opening__sub { margin: 24px var(--m) 0; }
+
+/* 2. The guest: photo, then the celadon band carrying the phone, then text */
+.guest {
+  --pw: 300px;
+  display: grid;
+  grid-template-columns: 100%;
+}
+.guest__photo {
+  grid-row: 1;
+  grid-column: 1;
+  margin: 0 56px 0 0;
+  aspect-ratio: 4 / 5;
+  z-index: 2;
+}
+.guest__photo img { position: absolute; inset: 0; object-position: 50% 35%; }
+.guest__band {
+  grid-row: 2;
+  grid-column: 1;
+  background: var(--celadon);
+}
+.guest__setting {
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: center;
+  padding: 40px 0 28px;
+  z-index: 1;
+}
+.guest__setting .caption { margin-top: 16px; color: var(--sage-on-celadon); }
+.guest__text {
+  position: relative;
+  z-index: 1;
+  grid-row: 3;
+  grid-column: 1;
+  padding: 0 var(--m);
+  margin-top: 44px;
+}
+
+/* 3 + 4. The room and the money */
+.room__pull { margin: 0 var(--m); }
+.room__note { margin: 20px var(--m) 0; }
+.money { padding: 0 var(--m); margin-top: 64px; }
+
+/* 5. Closing */
+.closing { display: flex; flex-direction: column; }
+.closing__photo {
+  margin-left: 40px;
+  aspect-ratio: 3 / 4;
+}
+/* The source is 2:3, so a 4:5 or 3:4 frame has no horizontal slack. The
+   image is drawn 1.47x from the window side: the left-wall posters fall
+   away and the frame holds the window, the tree, the bar and its chairs. */
+.closing__photo img {
+  object-position: 100% 70%;
+  transform: scale(1.47);
+  transform-origin: 92% 78%;
+}
+.closing__text { padding: 0 var(--m); margin-top: 40px; }
+.closing__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 28px;
+  margin-top: 32px;
+}
+
+/* --------------------------------------------------------------------------
+   The phone: matte graphite, upright, a crisp contact line where it meets
+   the cloth. Every inner size is a multiple of --u: one iPhone point.
+   Metrics measured from the real Bill screen (shared/img/flow-1.png).
+   -------------------------------------------------------------------------- */
+
+.phone {
+  --u: calc(var(--pw, 300px) * 0.938 / 393);
+  position: relative;
+  width: var(--pw, 300px);
+  padding: calc(var(--pw, 300px) * 0.031);
+  border-radius: calc(var(--pw, 300px) * 0.155);
+  background: #2A2F2D;
+  box-shadow: 0 1px 0 rgba(27, 42, 36, .34);
+}
+
+.phone__screen {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 393 / 852;
+  border-radius: calc(var(--pw, 300px) * 0.126);
+  background: #FAFBFA;
+  color: #0C2B30;
+  font-family: "Switzer", var(--sans);
+  font-size: calc(15 * var(--u));
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+.island {
+  position: absolute;
+  z-index: 3;
+  top: calc(var(--pw, 300px) * 0.03);
+  left: 50%;
+  width: calc(var(--pw, 300px) * 0.31);
+  height: calc(var(--pw, 300px) * 0.086);
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #000;
+}
+
+.m, .item__qty, .item__amt, .pbtn__cur, .pbtn__amt {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+}
+
+/* Content box: 24 pt left, 12 pt right, as the real render. */
+.bill {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: calc(82 * var(--u)) calc(10.4 * var(--u)) 0 calc(24 * var(--u));
+}
+
+.lang {
+  position: absolute;
+  top: calc(31.3 * var(--u));
+  right: calc(29.6 * var(--u));
+  width: calc(50.7 * var(--u));
+  height: calc(25.3 * var(--u));
+  border: calc(1 * var(--u)) solid #E0E4E4;
+  border-radius: 999px;
+  font-family: "Alexandria", "Switzer", sans-serif;
+  font-size: calc(10.5 * var(--u));
+  line-height: calc(23.3 * var(--u));
+  text-align: center;
+  color: #66716F;
+}
+
+.bill__venue { display: flex; align-items: flex-start; gap: calc(15.4 * var(--u)); }
+
+.bill__mark {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: calc(47 * var(--u));
+  height: calc(47 * var(--u));
+  border-radius: calc(11 * var(--u));
+  background: #0F1C1D;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: calc(15.5 * var(--u));
+  letter-spacing: -0.01em;
+}
+
+.bill__who { display: flex; flex-direction: column; padding-top: calc(3 * var(--u)); }
+
+.bill__name {
+  font-family: "Clash Display", "Switzer", sans-serif;
+  font-weight: 600;
+  font-size: calc(19 * var(--u));
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #0C2B30;
+}
+
+.bill__name .amp { font-family: "Switzer", sans-serif; font-weight: 700; }
+
+.bill__table {
+  margin-top: calc(5 * var(--u));
+  font-size: calc(13.55 * var(--u));
+  color: #66716F;
+}
+
+.bill__greet {
+  margin-top: calc(18.5 * var(--u));
+  font-size: calc(16 * var(--u));
+  line-height: calc(19 * var(--u));
+  color: #5B6567;
+}
+
+.bill__items { display: flex; flex-direction: column; margin-top: calc(9 * var(--u)); }
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: calc(60 * var(--u)) 1fr auto;
+  align-items: center;
+  column-gap: calc(15.9 * var(--u));
+  padding: calc(11.7 * var(--u)) 0;
+}
+.item + .item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(75.9 * var(--u));
+  right: 0;
+  height: calc(1 * var(--u));
+  background: #E3E7E7;
+}
+.item img {
+  width: calc(60 * var(--u));
+  height: calc(60 * var(--u));
+  border-radius: calc(12 * var(--u));
+  object-fit: cover;
+}
+.item__txt { display: flex; flex-direction: column; min-width: 0; }
+.item__name {
+  font-size: calc(16.85 * var(--u));
+  line-height: calc(19 * var(--u));
+  font-weight: 500;
+  color: #0C2B30;
+  white-space: nowrap;
+}
+.item__qty {
+  margin-top: calc(7 * var(--u));
+  font-size: calc(11.9 * var(--u));
+  line-height: calc(14 * var(--u));
+  color: #66716F;
+  white-space: pre;
+}
+.item__qty b { font-weight: 500; color: #0C2B30; margin-right: calc(7.7 * var(--u)); }
+.item__note { margin-top: calc(6 * var(--u)); font-size: calc(12.5 * var(--u)); color: #66716F; }
+.item__amt { font-size: calc(14.7 * var(--u)); font-weight: 500; color: #0C2B30; }
+.item--paid { opacity: .6; }
+.item--paid .item__name, .item--paid .item__amt { font-weight: 400; color: #4D5B5D; }
+
+.bill__sums {
+  display: flex;
+  flex-direction: column;
+  margin-top: calc(17.3 * var(--u));
+  padding-top: calc(13 * var(--u));
+  border-top: calc(1.7 * var(--u)) solid #0C2B30;
+}
+.sum {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  height: calc(28.6 * var(--u));
+  line-height: calc(28.6 * var(--u));
+  font-size: calc(14.8 * var(--u));
+  color: #5B6567;
+}
+.sum .m { font-size: calc(13.7 * var(--u)); color: #66716F; }
+.sum--total {
+  margin-top: calc(10 * var(--u));
+  padding-top: calc(12.5 * var(--u));
+  height: calc(41.1 * var(--u));
+  border-top: calc(1 * var(--u)) solid #E3E7E7;
+}
+.sum--paid { color: #A4ACAC; }
+.sum--paid .m { color: #A9B1B1; }
+
+.bill__actions {
+  position: absolute;
+  left: calc(24 * var(--u));
+  right: calc(12 * var(--u));
+  bottom: calc(11 * var(--u));
+  display: flex;
+  flex-direction: column;
+  gap: calc(12 * var(--u));
+}
+.bill__actions::before {
+  content: "";
+  position: absolute;
+  left: calc(-24 * var(--u));
+  right: calc(-12 * var(--u));
+  top: calc(-12 * var(--u));
+  height: calc(12 * var(--u));
+  background: linear-gradient(to bottom, rgba(250, 251, 250, 0), rgba(250, 251, 250, .85));
+}
+.pbtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(16 * var(--u));
+  font-weight: 600;
+  white-space: nowrap;
+}
+.pbtn--primary {
+  height: calc(56 * var(--u));
+  padding-left: calc(9 * var(--u));
+  background: #043C44;
+  color: #FFFFFF;
+  font-size: calc(17.1 * var(--u));
+  letter-spacing: -0.005em;
+}
+.pbtn__dot { margin: 0 calc(3.5 * var(--u)) 0 calc(8 * var(--u)); opacity: .7; }
+.pbtn__cur { font-size: calc(10 * var(--u)); font-weight: 400; color: rgba(255, 255, 255, .42); margin-right: calc(5 * var(--u)); letter-spacing: .02em; }
+.pbtn__amt { font-size: calc(17.25 * var(--u)); font-weight: 500; }
+.pbtn--secondary {
+  height: calc(54 * var(--u));
+  padding-left: calc(6 * var(--u));
+  background: #FFFFFF;
+  box-shadow: inset 0 0 0 calc(1 * var(--u)) #E3E6E6;
+  color: #0C2B30;
+  font-size: calc(15.9 * var(--u));
+}
+
+/* --------------------------------------------------------------------------
+   Footer on Celadon
+   -------------------------------------------------------------------------- */
+
+.foot {
+  margin-top: var(--rhythm);
+  background: var(--celadon);
+  padding: 56px var(--m) 48px;
+}
+.foot__in { display: flex; flex-direction: column; align-items: flex-start; gap: 28px; }
+.foot__logo { height: 22px; }
+.foot__links { display: flex; flex-direction: column; gap: 10px; }
+.foot__legal p {
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: #4C5953;
+  max-width: 420px;
+}
+
+/* --------------------------------------------------------------------------
+   Load moment: the curtain-slit reveal of the opening photograph.
+   The only motion that is not asked for.
+   -------------------------------------------------------------------------- */
+
+.js .opening__photo { clip-path: inset(0 44% 0 44%); }
+.js .opening__photo.is-open {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1200ms cubic-bezier(.65, 0, .35, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .opening__photo,
+  .js .opening__photo.is-open { clip-path: none; transition: none; }
+  .link, .button { transition: none; }
+}
+
+/* ==========================================================================
+   Small phones
+   ========================================================================== */
+
+@media (max-width: 374px) {
+  :root { --fs-h1: 44px; --fs-pull: 33px; --fs-h2: 30px; }
+  .opening__photo { margin-left: 32px; }
+  .guest__photo { margin-right: 48px; }
+  .closing__photo { margin-left: 32px; }
+}
+
+/* ==========================================================================
+   Tablet (600–899): the mobile essay, given more room
+   ========================================================================== */
+
+@media (min-width: 600px) {
+  :root {
+    --m: 48px;
+    --rhythm: 120px;
+    --fs-h1: 72px;
+    --fs-pull: 52px;
+    --fs-h2: 42px;
+    --fs-body: 17px;
+    --fs-cap: 16px;
+  }
+  .mast__in { padding-top: 28px; }
+  .mast__id { gap: 8px; }
+  .logo { height: 28px; }
+  .opening { padding-top: 40px; }
+  .opening__title { max-width: 640px; }
+  .opening__photo { margin: 44px 0 0 calc(var(--m) * 3); aspect-ratio: 4 / 3.4; }
+  .opening__sub { margin: 28px var(--m) 0 calc(var(--m) * 3); }
+
+  .guest { --pw: 340px; }
+  .guest__photo { margin-right: 36%; }
+  .guest__setting { padding: 56px 0 40px; }
+  .guest__text { padding-left: calc(var(--m) * 3); margin-top: 56px; }
+
+  .room__pull { margin-left: calc(var(--m) * 2); max-width: 600px; }
+  .room__note { margin-left: calc(var(--m) * 2); }
+  .money { padding-left: calc(var(--m) * 3); margin-top: 72px; }
+
+  .closing__photo { margin-left: 34%; }
+  .closing__text { padding-left: var(--m); margin-top: 48px; }
+}
+
+/* ==========================================================================
+   Desktop composition: 12 columns, 24 px gutters, 1320 px content,
+   60 px margins at 1440. Line numbers: col N starts at line N+1.
+   ========================================================================== */
+
+@media (min-width: 900px) {
+  :root {
+    --m: 40px;
+    --g: 24px;
+    --rhythm: 140px;
+    --fs-h1: clamp(64px, 6.667vw, 96px);
+    --fs-pull: clamp(50px, 5vw, 72px);
+    --fs-h2: clamp(38px, 3.611vw, 52px);
+    --fs-body: 17px;
+    --fs-cap: 16px;
+    --fs-small: 14px;
+    --cols:
+      minmax(calc(var(--m) - var(--g)), 1fr)
+      repeat(12, minmax(0, 88px))
+      minmax(calc(var(--m) - var(--g)), 1fr);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: var(--cols);
+    column-gap: var(--g);
+  }
+
+  /* masthead: one row; the photograph starts beneath it */
+  .mast {
+    display: grid;
+    grid-template-columns: var(--cols);
+    column-gap: var(--g);
+  }
+  .mast__in {
+    grid-column: 2 / 14;
+    height: 96px;
+    padding: 30px 0 0;
+  }
+  .mast__id { gap: 12px; }
+  .logo { height: 28px; }
+  .mast__cta { margin-top: 4px; }
+
+  /* 1. Opening */
+  .opening { padding-top: 0; }
+  .opening__photo {
+    grid-column: 6 / 15;
+    grid-row: 1;
+    margin: 0;
+    aspect-ratio: auto;
+    height: max(480px, min(calc(88vh - 96px), 56vw));
+  }
+  .opening__photo img { object-position: 50% 60%; }
+  .opening__title {
+    grid-column: 2 / 6;
+    grid-row: 1;
+    align-self: end;
+    padding: 0;
+    /* last baseline 72 px above the photograph's bottom edge (0.1365em = box bottom to baseline) */
+    margin-bottom: calc(0.75em - 0.1365em);
+    max-width: none;
+  }
+  .opening__title span { display: block; }
+  .opening__title span:nth-child(2)::after { content: none; }
+  .opening__sub {
+    grid-column: 6 / 11;
+    grid-row: 2;
+    margin: 28px 0 0;
+  }
+
+  /* 2. The guest. A full-bleed celadon band, one clean rectangle; the
+     photograph fills its left side top to bottom, the phone lies on it. */
+  .guest {
+    --pw: 320px;
+    --pad-t: 64px;
+    --pad-b: 104px;
+    grid-template-columns: var(--cols);
+    grid-template-rows: auto auto;
+  }
+  .guest__band { grid-column: 1 / -1; grid-row: 2; }
+  .guest__photo {
+    grid-column: 1 / 7;
+    grid-row: 2;
+    align-self: stretch;
+    aspect-ratio: auto;
+    margin: 0;
+  }
+  .guest__photo img { object-position: 50% 40%; }
+  .guest__setting {
+    grid-column: 8 / 14;
+    grid-row: 2;
+    justify-self: start;
+    position: relative;
+    padding: var(--pad-t) 0 var(--pad-b);
+  }
+  .guest__setting .caption {
+    position: absolute;
+    left: 0;
+    top: calc(100% - var(--pad-b) + 20px);
+    margin: 0;
+    white-space: nowrap;
+  }
+  .guest__text {
+    grid-column: 8 / 14;
+    grid-row: 1;
+    align-self: end;
+    margin: 0 0 56px;
+    padding: 0;
+  }
+
+  /* 3 + 4. One typographic spread under one viewport: the pull line
+     across the top, its note beneath on the left, the money statement
+     beside the note on the right */
+  .interlude { grid-template-rows: auto auto; }
+  .room {
+    grid-column: 3 / 11;
+    grid-row: 1 / 3;
+    display: grid;
+    grid-template-rows: subgrid;
+  }
+  .room__pull { grid-row: 1; margin: 0; max-width: none; }
+  .room__note {
+    grid-row: 2;
+    align-self: start;
+    max-width: 400px;
+    margin: 40px 0 0;
+    font-size: 18px;
+  }
+  .money {
+    grid-column: 9 / 14;
+    grid-row: 2;
+    margin: 40px 0 0;
+    padding: 0;
+  }
+
+  /* 5. Closing: portrait photograph bleeding right, text on its lower third */
+  .closing { display: grid; align-items: end; }
+  .closing__photo {
+    grid-column: 9 / 15;
+    grid-row: 1;
+    margin: 0;
+    aspect-ratio: 4 / 5;
+  }
+  .closing { margin-top: 104px; }
+  .closing__text {
+    grid-column: 3 / 8;
+    grid-row: 1;
+    align-self: center;
+    margin: 0 0 80px;
+    padding: 0;
+  }
+
+  /* footer */
+  .foot { padding: 72px 0 64px; }
+  .foot__in { display: grid; row-gap: 0; align-items: start; }
+  .foot__logo { grid-column: 2 / 5; height: 26px; }
+  .foot__links { grid-column: 6 / 9; gap: 8px; }
+  .foot__legal { grid-column: 10 / 14; }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --m: 60px;
+    --fs-body: 18px;
+    --fs-cap: 17px;
+  }
+  .opening__sub { grid-column: 6 / 10; }
+
+  /* the triptych: photograph | phone | text, all on the band */
+  .guest {
+    --pw: clamp(340px, 27vw, 388px);
+    grid-template-rows: auto;
+  }
+  .guest__band { grid-row: 1; }
+  .guest__photo { grid-column: 1 / 6; grid-row: 1; }
+  .guest__setting { grid-column: 6 / 10; grid-row: 1; justify-self: center; }
+  .guest__text {
+    grid-column: 10 / 14;
+    grid-row: 1;
+    align-self: end;
+    margin: 0 0 var(--pad-b);
+  }
+  .guest__text .body { color: var(--sage-on-celadon); }
+
+  .closing__photo { grid-column: 10 / 15; }
+}

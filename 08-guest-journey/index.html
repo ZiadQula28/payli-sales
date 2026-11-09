@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Payli: follow table 12 from bill to paid</title>
+<meta name="description" content="Payli is pay-at-table software for restaurants. Follow one bill from the guest’s phone to your POS.">
+<meta name="theme-color" content="#062227">
+<link rel="icon" href="../shared/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="../shared/css/fonts.css">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("has-js")</script>
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<header class="bar">
+  <a class="bar-logo" href="#top" aria-label="Payli, back to top">
+    <svg class="logo-full" viewBox="0 0 116 52" width="54" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.6168 7.32822C24.7884 7.32822 28.1309 9.38755 29.9491 13.0769C32.3824 17.9706 31.4733 24.5744 27.7828 28.853C26.0986 30.7783 22.782 33.4786 17.2744 33.4786C15.8572 33.4786 14.3059 33.2916 12.5947 32.8905C12.5677 36.3129 12.0337 39.2814 10.7224 41.1525C9.46517 42.9178 7.8351 43.5329 5.72167 43.5329C2.19223 43.2918 0 39.0944 0 32.5694C0.02705 27.2747 1.63124 20.4828 5.4547 15.2692C4.83961 12.9429 4.25156 11.0976 3.82347 10.0814L7.91508 8.31613C8.15618 8.87713 8.55723 10.0003 8.98415 11.4986C12.2196 8.85125 16.4182 7.32704 20.6157 7.32704L20.6168 7.32822ZM6.87306 21.6071C5.66993 24.2545 5.10775 26.7948 4.86783 28.1579C3.77172 34.5758 5.18891 38.7204 6.04392 39.0944C6.55199 39.1214 6.79309 38.9874 7.08711 38.5863C8.90535 35.966 8.18323 28.399 6.87306 21.6071ZM25.9645 15.0551C25.2153 13.558 23.6653 11.7927 20.6698 11.7927C16.7122 11.7927 12.9958 13.4768 10.2943 16.3653C11.1505 19.9218 11.9785 24.1733 12.3795 28.2109C14.0907 28.746 15.722 28.9859 17.1921 28.9859C20.1864 28.9859 22.6738 27.9427 24.4121 25.9375C26.9254 23.0231 27.5946 18.3435 25.9633 15.0551H25.9645Z"/><path fill="currentColor" d="M32.9799 32.0884C32.9799 27.2747 36.5634 24.2804 42.7132 23.7993L50.9493 23.1572V22.408C50.9493 18.0224 48.329 16.4723 44.7996 16.4723C40.5751 16.4723 38.1676 18.3446 38.1676 21.4989H33.782C33.782 16.0442 38.2746 12.4607 45.0124 12.4607C51.7503 12.4607 55.8689 15.8831 55.8689 22.9431V39.3613H51.5903L51.0552 35.1368C49.718 38.1312 46.1344 40.0035 41.9099 40.0035C36.2941 40.0035 32.9787 36.848 32.9787 32.0884H32.9799ZM51.0034 28.0768V26.6866L44.3185 27.2218C39.88 27.6498 38.0618 29.3611 38.0618 31.9285C38.0618 34.7099 40.094 36.1 43.3565 36.1C48.1161 36.1 51.0046 32.9987 51.0046 28.0779L51.0034 28.0768Z"/><path fill="currentColor" d="M57.5813 46.9554H60.9508C63.3571 46.9554 65.2824 46.5814 66.5125 43.2648L67.4217 40.7515L56.8863 13.2098H62.181L69.775 34.2806L77.5301 13.2098H82.7179L70.3642 45.2441C68.5989 49.7368 65.9786 51.608 61.9681 51.608C60.3099 51.608 58.9197 51.3939 57.5825 51.0728V46.9554H57.5813Z"/><path fill="currentColor" d="M85.2347 39.3613V0H90.2613V39.3613H85.2347Z"/><path fill="currentColor" d="M93.4038 3.69058C93.4038 1.81824 94.901 0.375183 96.7192 0.375183C98.5374 0.375183 100.035 1.81942 100.035 3.69058C100.035 5.56174 98.5374 7.00597 96.7192 7.00597C94.901 7.00597 93.4038 5.50881 93.4038 3.69058ZM94.2588 13.2098H99.2854V39.3614H94.2588V13.2098Z"/><path fill="currentColor" d="M108.365 1.52588e-05H111.532V0.535134H110.243V4.29627H109.661V0.535134H108.366V1.52588e-05H108.365Z"/><path fill="currentColor" d="M111.888 4.29625V0H112.459L113.938 3.61295L115.418 0H116V4.29625H115.43V2.5968C115.43 1.79471 115.435 1.50304 115.465 1.20079L114.211 4.29625H113.664L112.416 1.21255C112.446 1.42072 112.458 1.86057 112.458 2.46038V4.29625H111.887H111.888Z"/></svg>
+    <svg class="logo-icon" viewBox="6 6 32 39" width="22" height="27" aria-hidden="true" focusable="false"><path transform="translate(6 0)" fill="currentColor" d="M20.6168 7.32822C24.7884 7.32822 28.1309 9.38755 29.9491 13.0769C32.3824 17.9706 31.4733 24.5744 27.7828 28.853C26.0986 30.7783 22.782 33.4786 17.2744 33.4786C15.8572 33.4786 14.3059 33.2916 12.5947 32.8905C12.5677 36.3129 12.0337 39.2814 10.7224 41.1525C9.46517 42.9178 7.8351 43.5329 5.72167 43.5329C2.19223 43.2918 0 39.0944 0 32.5694C0.02705 27.2747 1.63124 20.4828 5.4547 15.2692C4.83961 12.9429 4.25156 11.0976 3.82347 10.0814L7.91508 8.31613C8.15618 8.87713 8.55723 10.0003 8.98415 11.4986C12.2196 8.85125 16.4182 7.32704 20.6157 7.32704L20.6168 7.32822ZM6.87306 21.6071C5.66993 24.2545 5.10775 26.7948 4.86783 28.1579C3.77172 34.5758 5.18891 38.7204 6.04392 39.0944C6.55199 39.1214 6.79309 38.9874 7.08711 38.5863C8.90535 35.966 8.18323 28.399 6.87306 21.6071ZM25.9645 15.0551C25.2153 13.558 23.6653 11.7927 20.6698 11.7927C16.7122 11.7927 12.9958 13.4768 10.2943 16.3653C11.1505 19.9218 11.9785 24.1733 12.3795 28.2109C14.0907 28.746 15.722 28.9859 17.1921 28.9859C20.1864 28.9859 22.6738 27.9427 24.4121 25.9375C26.9254 23.0231 27.5946 18.3435 25.9633 15.0551H25.9645Z"/></svg>
+  </a>
+  <nav class="bar-nav" aria-label="The journey, step by step">
+    <ol>
+      <li><a href="#scan">Scan</a></li>
+      <li><a href="#split">Split</a></li>
+      <li><a href="#tip">Tip</a></li>
+      <li><a href="#pay">Pay</a></li>
+      <li><a href="#paid">Paid</a></li>
+    </ol>
+  </nav>
+  <a class="bar-cta" href="mailto:info@payli.io?subject=Payli%20demo" aria-label="Book a demo"><span class="cta-long">Book a demo</span><span class="cta-short">Demo</span></a>
+</header>
+
+<main>
+
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <img class="hero-photo" src="../shared/photo/table-dinner-hands.webp" srcset="../shared/photo/table-dinner-hands-1000.webp 1000w, ../shared/photo/table-dinner-hands.webp 2000w, ../shared/photo/table-dinner-hands-2880.webp 2880w" sizes="100vw" width="2000" height="1333" alt="A dinner table with wine glasses, bread and a plated dish, a guest’s hand resting beside the plate." fetchpriority="high" decoding="async">
+    <div class="hero-panel">
+      <h1 id="hero-title">Follow table 12 from bill to paid.</h1>
+      <p>One bill at Cedar &amp; Sage, from the guest’s phone to your POS.</p>
+    </div>
+    <span class="hero-axis" aria-hidden="true"></span>
+  </section>
+
+  <section class="journey" aria-label="One bill, from scan to paid">
+    <div class="stage" data-step="1">
+
+      <div class="fixtures" aria-hidden="true">
+        <div class="table table--stage" data-state="open" aria-hidden="true">
+          <div class="tile"><span class="tile-num">12</span><span class="tile-disc"></span></div>
+          <p class="table-cap"><span class="table-name">Table 12</span><span class="table-states"><span data-s="open">Bill open</span><span data-s="paying">Paying now</span><span data-s="paid">Paid</span></span></p>
+        </div>
+      </div>
+
+      <!-- Step 1: Scan -->
+      <article class="step" id="scan" data-step="1" aria-labelledby="scan-title">
+        <div class="step-copy">
+          <h2 class="step-word" id="scan-title">Scan.</h2>
+          <p class="step-line">The itemised bill opens in the browser. No app, no sign-up.</p>
+        </div>
+        <div class="phone" role="img" aria-label="Guest’s phone showing the itemised bill for table 12 at Cedar &amp; Sage, bill total JOD 45.298.">
+          <div class="screen" aria-hidden="true">
+            <div class="ui s-bill">
+              <span class="s-lang" lang="ar" dir="rtl">العربية</span>
+              <div class="s-at s-venue" style="--y:87"><span class="s-avatar">CS</span><span class="s-venue-text"><span class="s-clash s-venue-name">Cedar &amp; Sage</span><span class="s-venue-table">Table 12</span></span></div>
+              <p class="s-at s-greet" style="--y:155">Whenever you’re ready, here’s your table.</p>
+              <ul class="s-at s-items" style="--y:183">
+                <li><img src="img/dish-cookies.webp" alt="" width="144" height="144" loading="lazy" decoding="async"><span class="s-it"><span class="s-it-name">Crushed cookies</span><span class="s-it-qty"><b>2×</b> 7.500</span></span><span class="s-amt">15.000</span></li>
+                <li><img src="img/dish-latte.webp" alt="" width="144" height="144" loading="lazy" decoding="async"><span class="s-it"><span class="s-it-name">Spanish ice latte</span><span class="s-it-qty"><b>1×</b> 5.250</span></span><span class="s-amt">5.250</span></li>
+                <li><img src="img/dish-eggs-greens.webp" alt="" width="144" height="144" loading="lazy" decoding="async"><span class="s-it"><span class="s-it-name">Eggs &amp; greens skillet</span><span class="s-it-qty"><b>1×</b> 6.500</span></span><span class="s-amt">6.500</span></li>
+                <li class="is-paid"><img src="img/dish-avocado.webp" alt="" width="144" height="144" loading="lazy" decoding="async"><span class="s-it"><span class="s-it-name">Avocado toast</span><span class="s-it-paid">Already paid</span></span><span class="s-amt">8.750</span></li>
+              </ul>
+              <span class="s-at s-heavy" style="--y:531"></span>
+              <div class="s-at s-sum" style="--y:547">
+                <span class="s-row"><span>Subtotal</span><span class="s-mono">35.500</span></span>
+                <span class="s-row"><span>Service charge (10%)</span><span class="s-mono">3.550</span></span>
+                <span class="s-row"><span>Tax</span><span class="s-mono">6.248</span></span>
+              </div>
+              <span class="s-at s-thin" style="--y:638"></span>
+              <div class="s-at s-sum" style="--y:646">
+                <span class="s-row"><span>Bill total</span><span class="s-mono">45.298</span></span>
+                <span class="s-row"><span>Already paid</span><span class="s-mono">20.735</span></span>
+              </div>
+              <span class="s-at s-btn s-btn--teal" style="--y:724;--h:56">Pay remaining <span class="s-sep">·</span> <span class="s-jod">JOD</span><span class="s-mono s-btn-amt">24.563</span></span>
+              <span class="s-at s-btn s-btn--ghost" style="--y:789;--h:52">Split the bill</span>
+            </div>
+            <span class="island"></span>
+          </div>
+        </div>
+        <div class="table table--step" data-state="open">
+          <div class="tile" aria-hidden="true"><span class="tile-num">12</span><span class="tile-disc"></span></div>
+          <p class="table-cap"><span class="table-name">Table 12</span> <span class="table-state">Bill open</span></p>
+        </div>
+      </article>
+
+      <!-- Step 2: Split -->
+      <article class="step" id="split" data-step="2" aria-labelledby="split-title">
+        <div class="step-copy">
+          <h2 class="step-word" id="split-title">Split.</h2>
+          <p class="step-line">Evenly, by item or any amount. Service and tax follow each item.</p>
+        </div>
+        <div class="phone" role="img" aria-label="Guest’s phone showing Split the bill, divided equally between two people: your share JOD 22.649.">
+          <div class="screen" aria-hidden="true">
+            <div class="ui s-split">
+              <span class="s-back"><svg viewBox="0 0 10 18" aria-hidden="true"><path d="M8.5 1.5 1.5 9l7 7.5"/></svg>Back</span>
+              <span class="s-lang" lang="ar" dir="rtl">العربية</span>
+              <p class="s-at s-crumb" style="--y:82">Cedar &amp; Sage <span class="s-sep">·</span> Table 12</p>
+              <p class="s-at s-clash s-title" style="--y:125">Split the bill</p>
+              <p class="s-at s-lead" style="--y:167">Pay for exactly what you had — or divide it.</p>
+              <div class="s-at s-share" style="--y:214;--h:145">
+                <span class="s-share-label">Your share</span>
+                <span class="s-share-big"><span class="s-jod">JOD</span>22.649</span>
+                <span class="s-share-note">Service &amp; tax are shared in proportion to your items.</span>
+              </div>
+              <div class="s-at s-opts" style="--y:384;--h:71">
+                <span class="s-opt is-sel"><b>Equally</b><span>Divide evenly</span></span>
+                <span class="s-opt"><b>By item</b><span>What you had</span></span>
+                <span class="s-opt"><b>Custom</b><span>An amount</span></span>
+              </div>
+              <div class="s-at s-steppers" style="--y:476;--h:156">
+                <span class="s-stepper"><span class="s-stepper-text"><b>People at your table</b><span>How many are sharing</span></span><span class="s-ctl"><i class="s-minus">−</i><span class="s-mono">2</span><i class="s-plus">+</i></span></span>
+                <span class="s-stepper"><span class="s-stepper-text"><b>You pay for</b><span>Cover yourself or others</span></span><span class="s-ctl"><i class="s-minus">−</i><span class="s-mono">1</span><i class="s-plus">+</i></span></span>
+              </div>
+              <p class="s-at s-pill" style="--y:658;--h:46">Service fee &amp; tax are distributed proportionally</p>
+              <span class="s-at s-btn s-btn--dark" style="--y:772;--h:54">Continue to tip <span class="s-sep">·</span> <span class="s-jod">JOD</span><span class="s-mono s-btn-amt">22.649</span></span>
+            </div>
+            <span class="island"></span>
+          </div>
+        </div>
+        <div class="table table--step" data-state="open">
+          <div class="tile" aria-hidden="true"><span class="tile-num">12</span><span class="tile-disc"></span></div>
+          <p class="table-cap"><span class="table-name">Table 12</span> <span class="table-state">Bill open</span></p>
+        </div>
+      </article>
+
+      <!-- Step 3: Tip -->
+      <article class="step" id="tip" data-step="3" aria-labelledby="tip-title">
+        <div class="step-copy">
+          <h2 class="step-word" id="tip-title">Tip.</h2>
+          <p class="step-line">5%, 10%, custom or none. The full tip goes to the restaurant.</p>
+        </div>
+        <div class="phone" role="img" aria-label="Guest’s phone showing Add a tip, with No tip selected: you pay JOD 22.649.">
+          <div class="screen" aria-hidden="true">
+            <div class="ui s-tip">
+              <span class="s-back"><svg viewBox="0 0 10 18" aria-hidden="true"><path d="M8.5 1.5 1.5 9l7 7.5"/></svg>Back</span>
+              <span class="s-lang" lang="ar" dir="rtl">العربية</span>
+              <p class="s-at s-clash s-title" style="--y:109">Add a tip</p>
+              <p class="s-at s-band" style="--y:168;--h:42">A 10% service charge is already included on your bill.</p>
+              <div class="s-at s-tips" style="--y:234;--h:79">
+                <span class="s-tipopt is-sel"><b>No tip</b></span>
+                <span class="s-tipopt"><b>5%</b><span>Kind</span></span>
+                <span class="s-tipopt"><b>10%</b><span>Generous</span></span>
+              </div>
+              <p class="s-at s-custom" style="--y:345"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10.6 2.4l3 3L5.2 13.8 1.9 14.1l.3-3.3z"/></svg>Enter a custom tip</p>
+              <div class="s-at s-card" style="--y:390;--h:170">
+                <span class="s-row"><span>Your share</span><span><span class="s-jod">JOD</span><span class="s-mono">22.649</span></span></span>
+                <span class="s-row"><span>Tip</span><span><span class="s-jod">JOD</span><span class="s-mono">0.000</span></span></span>
+                <span class="s-row s-row--total"><span>You pay</span><span><span class="s-jod">JOD</span><span class="s-mono">22.649</span></span></span>
+              </div>
+              <span class="s-at s-btn s-btn--dark" style="--y:740;--h:60">Continue to payment <span class="s-sep">·</span> <span class="s-jod">JOD</span><span class="s-mono s-btn-amt">22.649</span></span>
+            </div>
+            <span class="island"></span>
+          </div>
+        </div>
+        <div class="table table--step" data-state="open">
+          <div class="tile" aria-hidden="true"><span class="tile-num">12</span><span class="tile-disc"></span></div>
+          <p class="table-cap"><span class="table-name">Table 12</span> <span class="table-state">Bill open</span></p>
+        </div>
+      </article>
+
+      <!-- Step 4: Pay -->
+      <article class="step" id="pay" data-step="4" aria-labelledby="pay-title">
+        <div class="step-copy">
+          <h2 class="step-word" id="pay-title">Pay.</h2>
+          <p class="step-line">The card is entered on the payment provider’s own secure page.</p>
+        </div>
+        <div class="phone" role="img" aria-label="Guest’s phone showing the payment screen: you’re paying JOD 22.649, with a Pay by card button.">
+          <div class="screen screen--dark" aria-hidden="true">
+            <div class="ui s-pay">
+              <span class="s-back"><svg viewBox="0 0 10 18" aria-hidden="true"><path d="M8.5 1.5 1.5 9l7 7.5"/></svg>Back</span>
+              <p class="s-at s-paying" style="--y:124">You’re paying</p>
+              <p class="s-at s-payamt" style="--y:154"><span class="s-jod">JOD</span>22.649</p>
+              <p class="s-at s-where" style="--y:231">Cedar &amp; Sage <span class="s-sep">·</span> Table 12</p>
+              <div class="s-at s-card s-card--dark" style="--y:284;--h:158">
+                <span class="s-row"><span>Your share</span><span class="s-mono">22.649</span></span>
+                <span class="s-row"><span>Tip</span><span class="s-mono">0.000</span></span>
+                <span class="s-row s-row--total"><span>Total</span><span><span class="s-jod">JOD</span><span class="s-mono">22.649</span></span></span>
+              </div>
+              <span class="s-at s-btn s-btn--outline" style="--y:674;--h:58">Pay by card</span>
+              <p class="s-at s-foot" style="--y:760"><i class="s-dot"></i><span>Card details go to our payment provider, never to Payli</span></p>
+            </div>
+            <span class="island"></span>
+          </div>
+        </div>
+        <div class="table table--step" data-state="paying">
+          <div class="tile" aria-hidden="true"><span class="tile-num">12</span><span class="tile-disc"></span></div>
+          <p class="table-cap"><span class="table-name">Table 12</span> <span class="table-state">Paying now</span></p>
+        </div>
+      </article>
+
+      <!-- Step 5: Paid -->
+      <article class="step" id="paid" data-step="5" aria-labelledby="paid-title">
+        <div class="step-copy">
+          <h2 class="step-word" id="paid-title">Paid.</h2>
+          <p class="step-line">When the last share is in, the table turns to Paid.</p>
+        </div>
+        <div class="phone" role="img" aria-label="Guest’s phone showing the confirmation: You’re good to go. You paid JOD 22.649 to Cedar &amp; Sage. This bill is fully settled.">
+          <div class="screen" aria-hidden="true">
+            <div class="ui s-done">
+              <div class="s-done-mid">
+                <span class="s-check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                <p class="s-clash s-done-title">You’re good to go</p>
+                <p class="s-done-sub">You paid <b class="s-mono">JOD 22.649</b> to Cedar &amp; Sage.</p>
+                <span class="s-settled"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>This bill is fully settled</span>
+              </div>
+              <div class="s-done-foot">
+                <span class="s-btn s-btn--dark s-btn--done">Done</span>
+                <p class="s-foot"><i class="s-dot"></i><span>Payment confirmed <span class="s-sep">·</span> appears as Cedar &amp; Sage</span></p>
+              </div>
+            </div>
+            <span class="island"></span>
+          </div>
+        </div>
+        <div class="table table--step" data-state="paid">
+          <div class="tile" aria-hidden="true"><span class="tile-num">12</span><span class="tile-disc"></span></div>
+          <p class="table-cap"><span class="table-name">Table 12</span> <span class="table-state">Paid</span></p>
+        </div>
+      </article>
+
+    </div>
+    <div class="sentinels" aria-hidden="true"><div class="sentinel"></div><div class="sentinel"></div><div class="sentinel"></div><div class="sentinel"></div><div class="sentinel"></div></div>
+  </section>
+
+  <section class="floor" aria-labelledby="floor-title">
+    <div class="floor-text">
+      <h2 id="floor-title">Only fully paid bills reach your POS.</h2>
+      <p>Your floor shows every table as it happens, and every payment is on record to the fils. A licensed provider settles each payment straight to your own merchant account.</p>
+    </div>
+    <figure class="floor-plan">
+      <ol class="floor-row" aria-label="Tables 9 to 16">
+        <li class="table table--edge" data-state="empty"><span class="tile" aria-hidden="true"><span class="tile-num">9</span></span><span class="sr-only">Table 9: Empty</span></li>
+        <li class="table table--edge" data-state="open"><span class="tile" aria-hidden="true"><span class="tile-num">10</span></span><span class="sr-only">Table 10: Bill open</span></li>
+        <li class="table" data-state="paying"><span class="tile" aria-hidden="true"><span class="tile-num">11</span><span class="tile-disc"></span></span><span class="sr-only">Table 11: Paying now</span></li>
+        <li class="table table--twelve" data-state="paid"><span class="tile" aria-hidden="true"><span class="tile-num">12</span></span><span class="sr-only">Table 12: Paid</span></li>
+        <li class="table" data-state="open"><span class="tile" aria-hidden="true"><span class="tile-num">13</span></span><span class="sr-only">Table 13: Bill open</span></li>
+        <li class="table" data-state="empty"><span class="tile" aria-hidden="true"><span class="tile-num">14</span></span><span class="sr-only">Table 14: Empty</span></li>
+        <li class="table table--edge" data-state="paid"><span class="tile" aria-hidden="true"><span class="tile-num">15</span></span><span class="sr-only">Table 15: Paid</span></li>
+        <li class="table table--edge" data-state="open"><span class="tile" aria-hidden="true"><span class="tile-num">16</span></span><span class="sr-only">Table 16: Bill open</span></li>
+      </ol>
+      <div class="pos">
+        <span class="pos-line" aria-hidden="true"></span>
+        <span class="pos-label">Posted once fully paid</span>
+        <span class="pos-node table" data-state="pos"><span class="tile" aria-hidden="true"><span class="tile-num">POS</span></span><span class="sr-only">Your POS</span></span>
+      </div>
+      <div class="floor-foot">
+        <ul class="key">
+          <li data-state="empty"><span class="key-tile" aria-hidden="true"></span>Empty</li>
+          <li data-state="open"><span class="key-tile" aria-hidden="true"></span>Bill open</li>
+          <li data-state="paying"><span class="key-tile" aria-hidden="true"><span class="tile-disc"></span></span>Paying now</li>
+          <li data-state="paid"><span class="key-tile" aria-hidden="true"></span>Paid</li>
+        </ul>
+        <figcaption class="note">Illustration of the live floor.</figcaption>
+      </div>
+    </figure>
+  </section>
+
+  <section class="closing" aria-labelledby="closing-title">
+    <h2 id="closing-title">Run table 12 on your own menu.</h2>
+    <p class="closing-body">A 15-minute demo, on your menu. Payli is in closed beta in Amman.</p>
+    <div class="closing-actions">
+      <a class="button" href="mailto:info@payli.io?subject=Payli%20demo">Book a demo</a>
+      <a class="tel" href="tel:+962799538005">+962 7 9953 8005</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-legal">
+    <p class="pager" data-claim="pager-in-development">Next: the guest’s own phone as the order pager, for counter service. In development.</p>
+    <p>Payli is in closed beta in Amman. No restaurant is live yet.</p>
+    <p>Cedar &amp; Sage is a fictional venue used for illustration.</p>
+    <p>Payli is registered in the Hashemite Kingdom of Jordan.</p>
+  </div>
+  <ul class="foot-links">
+    <li><a href="mailto:info@payli.io">info@payli.io</a></li>
+    <li><a href="tel:+962799538005">+962 7 9953 8005</a></li>
+    <li><a href="https://payli.io">payli.io</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
