@@ -1,0 +1,4 @@
+/* Concept 02 fonts. Sofia Sans Condensed and Sofia Sans (Lettersoup), SIL OFL 1.1,
+   from Fontsource 5.3.0, latin subset, variable weight. Licence texts are beside this file. */
+@font-face { font-family: "Sofia Sans Condensed"; font-style: normal; font-weight: 1 1000; font-display: swap; src: url("sofia-sans-condensed-latin-wght-normal.woff2") format("woff2"); }
+@font-face { font-family: "Sofia Sans"; font-style: normal; font-weight: 1 1000; font-display: swap; src: url("sofia-sans-latin-wght-normal.woff2") format("woff2"); }

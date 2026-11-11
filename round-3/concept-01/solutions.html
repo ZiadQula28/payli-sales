@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solutions: Pay at Table, the Restaurant Dashboard and the Order Pager | Payli</title>
+<meta name="description" content="What Payli offers, with its present status: Pay at Table and the Restaurant Dashboard in closed beta, the Order Pager in development, and the POS connections.">
+<meta name="theme-color" content="#4A0F22">
+<link rel="icon" href="../../shared/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="../shared/demo/payli-demo.css">
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+<a class="hs-skip" href="#main">Skip to the page</a>
+
+<header class="hs-head">
+  <div class="hs-head-in">
+    <nav class="hs-nav hs-nav--a" aria-label="Pages, first half">
+      <ul>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="solutions.html" aria-current="page">Solutions</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+      </ul>
+    </nav>
+    <a class="hs-logo" href="index.html" aria-label="Payli, home"><svg viewBox="0 0 116 52" fill="currentColor" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Payli"><path d="M20.6168 7.32822C24.7884 7.32822 28.1309 9.38755 29.9491 13.0769C32.3824 17.9706 31.4733 24.5744 27.7828 28.853C26.0986 30.7783 22.782 33.4786 17.2744 33.4786C15.8572 33.4786 14.3059 33.2916 12.5947 32.8905C12.5677 36.3129 12.0337 39.2814 10.7224 41.1525C9.46517 42.9178 7.8351 43.5329 5.72167 43.5329C2.19223 43.2918 0 39.0944 0 32.5694C0.02705 27.2747 1.63124 20.4828 5.4547 15.2692C4.83961 12.9429 4.25156 11.0976 3.82347 10.0814L7.91508 8.31613C8.15618 8.87713 8.55723 10.0003 8.98415 11.4986C12.2196 8.85125 16.4182 7.32704 20.6157 7.32704L20.6168 7.32822ZM6.87306 21.6071C5.66993 24.2545 5.10775 26.7948 4.86783 28.1579C3.77172 34.5758 5.18891 38.7204 6.04392 39.0944C6.55199 39.1214 6.79309 38.9874 7.08711 38.5863C8.90535 35.966 8.18323 28.399 6.87306 21.6071ZM25.9645 15.0551C25.2153 13.558 23.6653 11.7927 20.6698 11.7927C16.7122 11.7927 12.9958 13.4768 10.2943 16.3653C11.1505 19.9218 11.9785 24.1733 12.3795 28.2109C14.0907 28.746 15.722 28.9859 17.1921 28.9859C20.1864 28.9859 22.6738 27.9427 24.4121 25.9375C26.9254 23.0231 27.5946 18.3435 25.9633 15.0551H25.9645Z"/><path d="M32.9799 32.0884C32.9799 27.2747 36.5634 24.2804 42.7132 23.7993L50.9493 23.1572V22.408C50.9493 18.0224 48.329 16.4723 44.7996 16.4723C40.5751 16.4723 38.1676 18.3446 38.1676 21.4989H33.782C33.782 16.0442 38.2746 12.4607 45.0124 12.4607C51.7503 12.4607 55.8689 15.8831 55.8689 22.9431V39.3613H51.5903L51.0552 35.1368C49.718 38.1312 46.1344 40.0035 41.9099 40.0035C36.2941 40.0035 32.9787 36.848 32.9787 32.0884H32.9799ZM51.0034 28.0768V26.6866L44.3185 27.2218C39.88 27.6498 38.0618 29.3611 38.0618 31.9285C38.0618 34.7099 40.094 36.1 43.3565 36.1C48.1161 36.1 51.0046 32.9987 51.0046 28.0779L51.0034 28.0768Z"/><path d="M57.5813 46.9554H60.9508C63.3571 46.9554 65.2824 46.5814 66.5125 43.2648L67.4217 40.7515L56.8863 13.2098H62.181L69.775 34.2806L77.5301 13.2098H82.7179L70.3642 45.2441C68.5989 49.7368 65.9786 51.608 61.9681 51.608C60.3099 51.608 58.9197 51.3939 57.5825 51.0728V46.9554H57.5813Z"/><path d="M85.2347 39.3613V0H90.2613V39.3613H85.2347Z"/><path d="M93.4038 3.69058C93.4038 1.81824 94.901 0.375183 96.7192 0.375183C98.5374 0.375183 100.035 1.81942 100.035 3.69058C100.035 5.56174 98.5374 7.00597 96.7192 7.00597C94.901 7.00597 93.4038 5.50881 93.4038 3.69058ZM94.2588 13.2098H99.2854V39.3614H94.2588V13.2098Z"/><path d="M108.365 1.52588e-05H111.532V0.535134H110.243V4.29627H109.661V0.535134H108.366V1.52588e-05H108.365Z"/><path d="M111.888 4.29625V0H112.459L113.938 3.61295L115.418 0H116V4.29625H115.43V2.5968C115.43 1.79471 115.435 1.50304 115.465 1.20079L114.211 4.29625H113.664L112.416 1.21255C112.446 1.42072 112.458 1.86057 112.458 2.46038V4.29625H111.887H111.888Z"/></svg></a>
+    <nav class="hs-nav hs-nav--b" aria-label="Pages, second half">
+      <ul>
+        <li><a href="demo.html">Try the demo</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hs-contents" type="button" data-hs-contents aria-haspopup="dialog" aria-expanded="false" aria-controls="hs-carte">Contents</button>
+  </div>
+</header>
+
+<dialog class="hs-sheet" id="hs-carte" aria-label="Contents">
+  <div class="hs-sheet-top">
+    <p>Contents</p>
+    <button class="hs-sheet-close" type="button" data-hs-close>Close</button>
+  </div>
+  <nav aria-label="All pages">
+    <ul class="hs-carte">
+          <li><a class="hs-carte-row" href="index.html"><span class="hs-carte-a">Home</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">a good ending</span></a></li>
+          <li><a class="hs-carte-row" href="company.html"><span class="hs-carte-a">Company</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">who we are</span></a></li>
+          <li><a class="hs-carte-row" href="solutions.html" aria-current="page"><span class="hs-carte-a">Solutions</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">what we offer</span></a></li>
+          <li><a class="hs-carte-row" href="how-it-works.html"><span class="hs-carte-a">How it works</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">both sides of one moment</span></a></li>
+          <li><a class="hs-carte-row" href="demo.html"><span class="hs-carte-a">Try the demo</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">in your browser</span></a></li>
+          <li><a class="hs-carte-row" href="resources.html"><span class="hs-carte-a">Resources</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">documents and answers</span></a></li>
+          <li><a class="hs-carte-row" href="contact.html"><span class="hs-carte-a">Contact</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">write or call</span></a></li>
+    </ul>
+    <ul class="hs-carte hs-sheet-docs">
+          <li><a class="hs-carte-row" href="../documents/Payli-Company-Profile-Concept-01.pdf" download><span class="hs-carte-a">Company profile</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">PDF, A4, 10 pages</span></a></li>
+          <li><a class="hs-carte-row" href="../documents/Payli-Product-Brochure-Concept-01.pdf" download><span class="hs-carte-a">Product brochure</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">PDF, A4, 6 pages</span></a></li>
+    </ul>
+  </nav>
+</dialog>
+
+<main id="main">
+<section class="hs-open hs-on-sumac" aria-labelledby="hs-title">
+  <h1 class="hs-open-h hs-h1" id="hs-title"><span class="hs-open-l1">Pay at Table,</span> <span class="hs-open-l2">the Restaurant Dashboard and the Order Pager.</span></h1>
+  <figure class="hs-runner" style="--ry:34%">
+    <img src="img/photo/room-slat-wall-1000.webp" srcset="img/photo/room-slat-wall-1000.webp 1000w, img/photo/room-slat-wall.webp 2000w" sizes="100vw" width="2000" height="1431" alt="A banquette and a row of small tables beneath a softly lit slatted wall." decoding="async" fetchpriority="high">
+  </figure>
+  <div class="hs-open-lede">
+    <p class="hs-lede">Three pieces of software that share one guest web app and one dashboard. Each is listed below with its present status, and nothing is described as ready that is not.</p>
+  </div>
+</section>
+
+<section class="hs-sec hs-sec--tight hs-on-sumac" aria-label="What we offer">
+  <div class="hs-wrap">
+    <ul class="hs-carte hs-carte--ruled hs-carte--big">
+      <li><a class="hs-carte-row" href="#pay-at-table"><span class="hs-carte-a">Pay at Table</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">closed beta</span></a></li>
+      <li><a class="hs-carte-row" href="#dashboard"><span class="hs-carte-a">Restaurant Dashboard</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">closed beta</span></a></li>
+      <li><a class="hs-carte-row" href="#order-pager"><span class="hs-carte-a">Order Pager</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">in development</span></a></li>
+      <li><a class="hs-carte-row" href="#connections"><span class="hs-carte-a">Connections</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">in development or planned</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="hs-sec hs-on-bone" id="pay-at-table" aria-labelledby="hs-pat">
+  <div class="hs-wrap">
+    <div class="hs-sec-head">
+      <h2 class="hs-h2" id="hs-pat">Pay at Table</h2>
+      <p class="hs-status">In closed beta.</p>
+    </div>
+    <ol class="hs-row4" tabindex="0" aria-label="The four steps on the guest's phone">
+      <li>
+        <div class="hs-plate hs-row4-plate"><div class="hs-phone"><div class="hs-phone-screen" data-snap="table:bill:phone"></div></div></div>
+        <h3 class="hs-h4"><span class="hs-num">1.</span> Scan</h3>
+        <p class="hs-cap">One code for each table. The itemised bill opens in the phone&rsquo;s browser: no app, no sign-up, no Wi-Fi password.</p>
+      </li>
+      <li>
+        <div class="hs-plate hs-row4-plate"><div class="hs-phone"><div class="hs-phone-screen" data-snap="table:split:phone"></div></div></div>
+        <h3 class="hs-h4"><span class="hs-num">2.</span> Split</h3>
+        <p class="hs-cap">Evenly, by item, or any amount. Service charge and tax follow the items in proportion.</p>
+      </li>
+      <li>
+        <div class="hs-plate hs-row4-plate"><div class="hs-phone"><div class="hs-phone-screen" data-snap="table:tip:phone"></div></div></div>
+        <h3 class="hs-h4"><span class="hs-num">3.</span> Tip</h3>
+        <p class="hs-cap">Five per cent, ten per cent, a custom amount, or none. The full tip goes to the restaurant.</p>
+      </li>
+      <li>
+        <div class="hs-plate hs-row4-plate"><div class="hs-phone"><div class="hs-phone-screen" data-snap="table:pay:phone"></div></div></div>
+        <h3 class="hs-h4"><span class="hs-num">4.</span> Pay</h3>
+        <p class="hs-cap">Visa or Mastercard, and Apple Pay or Google Pay where the payment provider enables them.</p>
+      </li>
+    </ol>
+    <div class="hs-two hs-mt-l">
+      <div>
+        <h3 class="hs-h3">For your guests</h3>
+        <p>Nobody can pay twice for the same item, and the table stays open until the last share is paid. Card details are entered on the provider&rsquo;s own secure page and never reach Payli.</p>
+        <p>Afterwards your guest sees a confirmation on screen, and may leave a rating of one to five stars with a comment.</p>
+      </div>
+      <div>
+        <h3 class="hs-h3">For your team</h3>
+        <p>Payli takes no fee on tips. Your team can view and print a receipt for any payment, and every guest screen is offered in English and in Arabic, with amounts in JOD to three decimals.</p>
+        <p class="hs-cap">Cedar &amp; Sage is a fictional venue used for illustration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hs-sec hs-on-rose" id="dashboard" aria-labelledby="hs-dash">
+  <div class="hs-wrap">
+    <div class="hs-sec-head">
+      <h2 class="hs-h2" id="hs-dash">The Restaurant Dashboard</h2>
+      <p class="hs-status">In closed beta. In English today.</p>
+    </div>
+    <div class="hs-dash">
+      <figure class="hs-dash-main">
+        <div class="hs-capture">
+          <img src="../../shared/img/dashboard-1200.webp" srcset="../../shared/img/dashboard-1200.webp 1200w, ../../shared/img/dashboard.webp 2336w" sizes="(max-width: 900px) 120vw, 66vw" width="1200" height="896" alt="The Payli dashboard's Financial Transactions screen: collected total, tips, and a row for each payment with its table, bill, tip, total, method and time." loading="lazy" decoding="async">
+        </div>
+        <figcaption class="hs-cap">Transactions, from the product. <a href="../../shared/img/dashboard.webp">View the full screen</a></figcaption>
+      </figure>
+      <figure class="hs-dash-side">
+        <div class="hs-shot" data-snap="table:floor_paying:staff" data-variant="card"></div>
+        <figcaption class="hs-cap">Table 12 on the live floor, while a guest is paying.</figcaption>
+      </figure>
+    </div>
+    <div class="hs-dash-text hs-mt-l">
+      <div class="hs-prose">
+        <p>One dashboard for the floor, the payments and the end-of-day figures. It runs in a web browser on any tablet, phone or laptop.</p>
+        <p>Each payment appears as it happens, with its table, bill, tip, total, method and time. A refund is started from the same screen and recorded with who made it and why, and tips are always shown apart from sales.</p>
+      </div>
+      <ul class="hs-carte hs-carte--ruled hs-carte--long">
+        <li class="hs-carte-row"><span class="hs-carte-a">Live floor</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">Empty, Bill open, Paying now, Paid</span></li>
+        <li class="hs-carte-row"><span class="hs-carte-a">Transactions</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">receipts, refunds, a spreadsheet export</span></li>
+        <li class="hs-carte-row"><span class="hs-carte-a">Ledger</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">double-entry, append-only, exact to the fils</span></li>
+        <li class="hs-carte-row"><span class="hs-carte-a">Menu</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">item names in both languages</span></li>
+        <li class="hs-carte-row"><span class="hs-carte-a">Ratings</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">stars and comments from your guests</span></li>
+        <li class="hs-carte-row"><span class="hs-carte-a">Table QR codes</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">one to print for each table</span></li>
+        <li class="hs-carte-row"><span class="hs-carte-a">Reconciliation</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">a three-way match, run on demand</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="hs-sec hs-on-mulberry" id="order-pager" aria-labelledby="hs-pager">
+  <div class="hs-wrap">
+    <div class="hs-sec-head">
+      <h2 class="hs-h2" id="hs-pager">The Order Pager</h2>
+      <p class="hs-status">In development; not yet live at any venue.</p>
+    </div>
+    <div class="hs-counter">
+      <div class="hs-prose">
+        <p>The guest&rsquo;s own phone replaces the buzzer. A guest scans a code at the counter, with no app, no account and no phone number, and the page shows your restaurant&rsquo;s name and welcome line, the order number, a timeline and a time estimate.</p>
+        <p>When your team presses Ready &amp; ring, the page reads &ldquo;Your order is ready&rdquo; and says where to collect it. It chimes if sound is on, and the guest may tap I&rsquo;m on my way, which the counter sees.</p>
+        <p>It can be made your own: logo, colours, one of three themes, welcome line, pickup instructions and the wording of each status, in English and Arabic. Your team creates the order after taking payment as they do today, so it works beside any till.</p>
+      </div>
+      <figure class="hs-counter-photo">
+        <img src="img/photo/counter-tray-service-1000.webp" srcset="img/photo/counter-tray-service-1000.webp 1000w, img/photo/counter-tray-service.webp 2880w" sizes="(max-width: 900px) 100vw, 46vw" width="2880" height="1920" alt="A tray of four coffees being lifted from a wooden counter." loading="lazy" decoding="async">
+        <figcaption class="hs-cap">Photo: Shixart1985 / Wikimedia Commons, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a> (adapted)</figcaption>
+      </figure>
+    </div>
+    <div class="hs-plate hs-trio hs-mt-l">
+      <figure><div class="hs-phone" style="--pw:220px"><div class="hs-phone-screen" data-snap="pager:received:phone"></div></div><figcaption class="hs-cap">Order received, with an estimate.</figcaption></figure>
+      <figure><div class="hs-phone" style="--pw:220px"><div class="hs-phone-screen" data-snap="pager:ready:phone"></div></div><figcaption class="hs-cap">Ready, and where to collect it.</figcaption></figure>
+      <figure><div class="hs-phone" style="--pw:220px"><div class="hs-phone-screen" data-snap="pager:collected:phone"></div></div><figcaption class="hs-cap">Collected.</figcaption></figure>
+    </div>
+    <figure class="hs-plate hs-boardshot">
+      <div class="hs-shot" data-snap="pager:ready:staff" data-variant="board"></div>
+      <figcaption class="hs-cap">The counter&rsquo;s board at the moment order #24 is ready. Cedar &amp; Sage is a fictional venue used for illustration.</figcaption>
+    </figure>
+    <p class="hs-small hs-mt-m hs-measure">The order page updates live, chimes when sound is on and, on Android, vibrates; with permission it also shows a notification. It follows the phone&rsquo;s own sound settings. <a href="demo.html#counter">Ring the phone yourself in the demo</a></p>
+  </div>
+</section>
+
+<section class="hs-sec hs-on-bone" id="connections" aria-labelledby="hs-conn">
+  <div class="hs-wrap hs-grid">
+    <div class="hs-conn-text">
+      <h2 class="hs-h2" id="hs-conn">Connections</h2>
+      <div class="hs-prose hs-mt-m">
+        <p>Your POS gives Payli the menu and prices, so the bill on the phone matches the one your team rang up. Payli sends your provider only the amount to charge; card details stay on the provider&rsquo;s page. When the table is fully paid, the finished sale goes back into your POS with its items, tax, service, tip and tender.</p>
+      </div>
+    </div>
+    <div class="hs-conn-table">
+      <table class="hs-ledger">
+        <caption class="hs-vh">Connections and their status</caption>
+        <thead><tr><th scope="col">System</th><th scope="col">Kind</th><th scope="col">Status</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">AQUA POS</th><td>POS</td><td>In development</td></tr>
+          <tr><th scope="row">Foodics</th><td>POS</td><td>In development</td></tr>
+          <tr><th scope="row">Oracle MICROS Simphony</th><td>POS</td><td>Planned</td></tr>
+          <tr><th scope="row">POSRocket</th><td>POS</td><td>Planned</td></tr>
+          <tr><th scope="row">A licensed payment provider</th><td>Payments</td><td>Confirmed for your venue in the walkthrough</td></tr>
+        </tbody>
+      </table>
+      <p class="hs-small hs-mt-s">&ldquo;In development&rdquo; means the connector is being built and tested against the vendor&rsquo;s test system and is not live at any restaurant. &ldquo;Planned&rdquo; means it is not built yet.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="hs-foot hs-on-sumac" id="hs-foot">
+  <div class="hs-wrap">
+    <div class="hs-foot-cols">
+      <nav aria-label="Footer">
+        <h2 class="hs-foot-h">The carte</h2>
+        <ul class="hs-carte">
+          <li><a class="hs-carte-row" href="company.html"><span class="hs-carte-a">Company</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">who we are</span></a></li>
+          <li><a class="hs-carte-row" href="solutions.html" aria-current="page"><span class="hs-carte-a">Solutions</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">what we offer</span></a></li>
+          <li><a class="hs-carte-row" href="how-it-works.html"><span class="hs-carte-a">How it works</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">both sides of one moment</span></a></li>
+          <li><a class="hs-carte-row" href="demo.html"><span class="hs-carte-a">Try the demo</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">in your browser</span></a></li>
+          <li><a class="hs-carte-row" href="resources.html"><span class="hs-carte-a">Resources</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">documents and answers</span></a></li>
+          <li><a class="hs-carte-row" href="contact.html"><span class="hs-carte-a">Contact</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">write or call</span></a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="hs-foot-h">Write or call</h2>
+        <ul class="hs-foot-list">
+          <li><a href="mailto:info@payli.io">info@payli.io</a></li>
+          <li><a href="tel:+962799538005">+962 7 9953 8005</a></li>
+          <li class="hs-dim">Sunday to Thursday, business hours in Amman</li>
+          <li class="hs-dim">We reply within one business day, in English or Arabic</li>
+          <li><a href="mailto:info@payli.io?subject=Payli%20walkthrough">Book a 15-minute walkthrough</a></li>
+          <li><a href="https://www.linkedin.com/company/payli.io">LinkedIn</a>, <a href="https://x.com/payli_io">X</a>, <a href="https://www.instagram.com/payli.io">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="hs-foot-h">Documents</h2>
+        <ul class="hs-carte">
+          <li><a class="hs-carte-row" href="../documents/Payli-Company-Profile-Concept-01.pdf" download><span class="hs-carte-a">Company profile</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">PDF, A4, 10 pages</span></a></li>
+          <li><a class="hs-carte-row" href="../documents/Payli-Product-Brochure-Concept-01.pdf" download><span class="hs-carte-a">Product brochure</span><span class="hs-carte-dots" aria-hidden="true"></span><span class="hs-carte-b">PDF, A4, 6 pages</span></a></li>
+        </ul>
+        <p class="hs-small hs-mt-s">Edition November 2026. Both are also on the <a href="resources.html">resources page</a>.</p>
+      </div>
+    </div>
+    <div class="hs-foot-legal">
+      <p>Payli is in closed beta in Amman, Jordan. No restaurant is live yet. Order Pager is in development and not yet live at any venue.</p>
+      <p>Cedar &amp; Sage, the venue on the product screens, is a fictional venue used for illustration.</p>
+      <p>Payli at <a href="https://payli.io">payli.io</a> is not affiliated with other companies or apps that use the name Payli or PayLi.</p>
+      <p>Payli is operated by a company registered in the Hashemite Kingdom of Jordan. &copy; 2026 Payli</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../shared/demo/payli-demo-core.js"></script>
+<script src="../shared/demo/payli-demo-ui.js"></script>
+<script src="js/site.js"></script>
+
+</body>
+</html>

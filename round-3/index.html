@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Payli Round 3: three websites, a working demo, six documents</title>
+<meta name="description" content="Round 3 of the Payli website: three complete company websites, each with a working interactive demo and two downloadable PDF documents.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="../shared/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../shared/css/fonts.css">
+<style>
+:root{--ink:#0b1d20;--ink2:#56686b;--teal:#043c44;--paper:#f4f6f5;--card:#fff;--line:rgba(11,29,32,.14);--c1:#4a0f22;--c2:#2b2d2e;--c3:#1d35c9}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 "Switzer",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--teal);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+header{padding:44px 0 8px}
+header .logo{display:block;height:30px;width:auto}
+h1{font-weight:600;font-size:clamp(32px,4.6vw,56px);line-height:1.04;letter-spacing:-.03em;margin:28px 0 16px;max-width:17ch}
+.lede{max-width:66ch;color:var(--ink2);margin:0}
+.answer{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:36px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.answer div{padding:20px 24px 22px 0}
+.answer div+div{padding-left:24px;border-left:1px solid var(--line)}
+.answer q{display:block;quotes:"\201C" "\201D";color:var(--ink2);font-size:15px}
+.answer strong{display:block;font-weight:600;font-size:19px;line-height:1.25;letter-spacing:-.01em;margin-top:8px}
+.concept{padding:64px 0 8px}
+.concept+.concept{border-top:1px solid var(--line);margin-top:56px}
+.concept .head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px 48px;align-items:end;margin-bottom:26px}
+.concept .num{font-size:15px;color:var(--ink2);font-variant-numeric:tabular-nums;margin:0 0 8px}
+.concept h2{font-weight:600;font-size:clamp(28px,3.4vw,42px);line-height:1.05;letter-spacing:-.025em;margin:0}
+.concept .pitch{margin:0;color:var(--ink2);max-width:60ch}
+.shots{display:grid;grid-template-columns:minmax(0,3.1fr) minmax(0,3.1fr) minmax(0,1fr);gap:16px;align-items:start}
+.shots figure{margin:0}
+.shots a{display:block;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px var(--line);background:#e6eae9}
+.shots .m a{border-radius:18px}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{font-size:13.5px;color:var(--ink2);margin-top:8px}
+.row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px 48px;margin-top:28px;align-items:start}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:8px;font-weight:600;font-size:15.5px;text-decoration:none;box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.solid{background:var(--k,var(--ink));color:#fff;box-shadow:none}
+.btn:hover{text-decoration:underline;text-underline-offset:4px}
+.facts{margin:18px 0 0;padding:0;list-style:none;font-size:15px;color:var(--ink2);display:grid;gap:6px}
+.facts b{color:var(--ink);font-weight:600}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.doc{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:start;text-decoration:none}
+.doc img{display:block;width:92px;height:auto;box-shadow:0 0 0 1px var(--line),0 6px 14px -8px rgba(11,29,32,.45)}
+.doc strong{display:block;font-weight:600;font-size:16px;line-height:1.25;text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.doc span{display:block;font-size:13.5px;color:var(--ink2);margin-top:4px}
+.c1{--k:var(--c1)}.c2{--k:var(--c2)}.c3{--k:var(--c3)}
+.concept h2::before{content:"";display:inline-block;width:.5em;height:.5em;border-radius:50%;background:var(--k);margin-right:.35em;transform:translateY(-.08em)}
+.compare{padding:72px 0 0}
+.compare h2,.notes h2{font-weight:600;font-size:clamp(22px,2.4vw,30px);letter-spacing:-.02em;line-height:1.15;margin:0 0 18px}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:12px 16px 12px 0;border-top:1px solid var(--line)}
+thead th{border-top:0;font-weight:600;padding-bottom:10px}
+tbody th{font-weight:600;color:var(--ink2);width:17%}
+.notes{padding:64px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:40px 56px}
+.notes p,.notes li{color:var(--ink2);font-size:15.5px}
+.notes ul{margin:0;padding-left:1.1em;display:grid;gap:8px}
+.notes a{color:var(--teal);font-weight:600}
+footer{padding:56px 0 64px;color:var(--ink2);font-size:13.5px}
+footer p{margin:0 0 6px;max-width:90ch}
+@media (max-width:900px){
+  .answer{grid-template-columns:1fr}.answer div+div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+  .concept .head,.row,.notes{grid-template-columns:1fr}
+  .shots{grid-template-columns:1fr 1fr}.shots .m{grid-column:1/2;max-width:170px}
+}
+@media (max-width:560px){.shots{grid-template-columns:1fr}.docs{grid-template-columns:1fr}.btn{flex:1 1 100%;justify-content:center}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <img class="logo" src="../shared/img/logo.svg" alt="Payli" width="103" height="30">
+  <h1>Three complete websites, a working demo and six documents.</h1>
+  <p class="lede">Round 3 answers management's review of the last round point by point. Each concept below is a full company website of seven pages with its own identity, a demo anyone can operate, and two PDF documents to send to restaurant owners and partners.</p>
+  <div class="answer">
+    <div><q>Far too abbreviated… much too short.</q><strong>Seven real pages per site: company, products, how it works, FAQ, contact.</strong></div>
+    <div><q>There's no demo people can try anymore.</q><strong>A working demo on every site: press Ready &amp; ring and the guest's phone answers.</strong></div>
+    <div><q>We want PDFs.</q><strong>Six designed A4 documents: a company profile and a product brochure per concept.</strong></div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="concept c1" aria-labelledby="c1h">
+  <div class="head">
+    <div><p class="num">Concept 01</p><h2 id="c1h">The Hospitality Standard</h2></div>
+    <p class="pitch">A premium hospitality house introducing its technology. Burgundy, a light serif and one panoramic photograph through every opening headline. Written for established restaurants and groups; leads with Pay at Table.</p>
+  </div>
+  <div class="shots">
+    <figure><a href="concept-01/index.html"><img src="gallery/concept-01-home.jpg" width="1440" height="900" alt="Concept 01 home page on a desktop screen"></a><figcaption>Home</figcaption></figure>
+    <figure><a href="concept-01/demo.html"><img src="gallery/concept-01-demo.jpg" width="1440" height="900" alt="Concept 01 interactive demo page"></a><figcaption>Interactive demo</figcaption></figure>
+    <figure class="m"><a href="concept-01/index.html"><img src="gallery/concept-01-mobile.jpg" width="600" height="1298" alt="Concept 01 home page on a phone" loading="lazy"></a><figcaption>On a phone</figcaption></figure>
+  </div>
+  <div class="row">
+    <div>
+      <div class="acts">
+        <a class="btn solid" href="concept-01/index.html">Open the website</a>
+        <a class="btn" href="concept-01/demo.html">Try the demo</a>
+      </div>
+      <ul class="facts"><li><b>Seven pages:</b> Home, Company, Solutions, How it works, Demo, Resources, Contact</li><li><b>About 3,700 words</b> of company and product content</li><li><b>Demo:</b> Order Pager and Pay at Table, with Apple Pay, in English and Arabic</li></ul>
+    </div>
+    <div class="docs">
+      <a class="doc" href="documents/Payli-Company-Profile-Concept-01.pdf" download><img src="gallery/concept-01-profile.jpg" width="700" height="991" alt="" loading="lazy"><div><strong>Company Profile</strong><span>PDF, A4, 10 pages, 2.1 MB</span></div></a>
+      <a class="doc" href="documents/Payli-Product-Brochure-Concept-01.pdf" download><img src="gallery/concept-01-brochure.jpg" width="700" height="991" alt="" loading="lazy"><div><strong>Product &amp; Solution Brochure</strong><span>PDF, A4, 6 pages, 2.3 MB</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="concept c2" aria-labelledby="c2h">
+  <div class="head">
+    <div><p class="num">Concept 02</p><h2 id="c2h">Service, Connected</h2></div>
+    <p class="pitch">A business technology platform, laid out the way the system works: the restaurant on the left, the guest on the right, and one orange signal that moves only when something real passes between them. Diagram-led; both products lead equally.</p>
+  </div>
+  <div class="shots">
+    <figure><a href="concept-02/index.html"><img src="gallery/concept-02-home.jpg" width="1440" height="900" alt="Concept 02 home page on a desktop screen" loading="lazy"></a><figcaption>Platform overview</figcaption></figure>
+    <figure><a href="concept-02/demo.html"><img src="gallery/concept-02-demo.jpg" width="1440" height="900" alt="Concept 02 interactive demo page" loading="lazy"></a><figcaption>Interactive demo</figcaption></figure>
+    <figure class="m"><a href="concept-02/index.html"><img src="gallery/concept-02-mobile.jpg" width="600" height="1298" alt="Concept 02 home page on a phone" loading="lazy"></a><figcaption>On a phone</figcaption></figure>
+  </div>
+  <div class="row">
+    <div>
+      <div class="acts">
+        <a class="btn solid" href="concept-02/index.html">Open the website</a>
+        <a class="btn" href="concept-02/demo.html">Try the demo</a>
+      </div>
+      <ul class="facts"><li><b>Seven pages:</b> Overview, Products, Operations, Demo, Guest experience, Company, Resources</li><li><b>About 5,500 words</b> of company and product content</li><li><b>Demo:</b> Order Pager and Pay at Table, with Apple Pay, in English and Arabic</li></ul>
+    </div>
+    <div class="docs">
+      <a class="doc" href="documents/Payli-Company-Profile-Concept-02.pdf" download><img src="gallery/concept-02-profile.jpg" width="700" height="991" alt="" loading="lazy"><div><strong>Company Profile</strong><span>PDF, A4, 10 pages, 2.2 MB</span></div></a>
+      <a class="doc" href="documents/Payli-Product-Brochure-Concept-02.pdf" download><img src="gallery/concept-02-brochure.jpg" width="700" height="991" alt="" loading="lazy"><div><strong>Product &amp; Solution Brochure</strong><span>PDF, A4, 6 pages, 1.5 MB</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="concept c3" aria-labelledby="c3h">
+  <div class="head">
+    <div><p class="num">Concept 03</p><h2 id="c3h">The Guest Experience</h2></div>
+    <p class="pitch">The story told from the guest's seat. Cobalt, heavy type and photographs that stay blue while an order waits and turn to full colour when you ring the phone. The home page itself is a live demo; leads with the Order Pager.</p>
+  </div>
+  <div class="shots">
+    <figure><a href="concept-03/index.html"><img src="gallery/concept-03-home.jpg" width="1440" height="900" alt="Concept 03 home page on a desktop screen" loading="lazy"></a><figcaption>The experience</figcaption></figure>
+    <figure><a href="concept-03/demo.html"><img src="gallery/concept-03-demo.jpg" width="1440" height="900" alt="Concept 03 interactive demo page" loading="lazy"></a><figcaption>Interactive product experience</figcaption></figure>
+    <figure class="m"><a href="concept-03/index.html"><img src="gallery/concept-03-mobile.jpg" width="600" height="1298" alt="Concept 03 home page on a phone" loading="lazy"></a><figcaption>On a phone</figcaption></figure>
+  </div>
+  <div class="row">
+    <div>
+      <div class="acts">
+        <a class="btn solid" href="concept-03/index.html">Open the website</a>
+        <a class="btn" href="concept-03/demo.html">Try the demo</a>
+      </div>
+      <ul class="facts"><li><b>Seven pages:</b> The experience, Discover, Journey, For restaurants, Demo, Company, Resources</li><li><b>About 4,400 words</b> of company and product content</li><li><b>Demo:</b> Order Pager and Pay at Table, with Apple Pay, in English and Arabic</li></ul>
+    </div>
+    <div class="docs">
+      <a class="doc" href="documents/Payli-Company-Profile-Concept-03.pdf" download><img src="gallery/concept-03-profile.jpg" width="700" height="991" alt="" loading="lazy"><div><strong>Company Profile</strong><span>PDF, A4, 11 pages, 4.4 MB</span></div></a>
+      <a class="doc" href="documents/Payli-Product-Brochure-Concept-03.pdf" download><img src="gallery/concept-03-brochure.jpg" width="700" height="991" alt="" loading="lazy"><div><strong>Product &amp; Solution Brochure</strong><span>PDF, A4, 6 pages, 2.9 MB</span></div></a>
+    </div>
+  </div>
+</section>
+
+<section class="compare" aria-labelledby="cmp">
+  <h2 id="cmp">How the three differ</h2>
+  <div class="tablewrap">
+  <table>
+    <thead><tr><th scope="col"></th><th scope="col">01 The Hospitality Standard</th><th scope="col">02 Service, Connected</th><th scope="col">03 The Guest Experience</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Speaks as</th><td>The maître d': full, courteous sentences</td><td>The operations manual: short and exact</td><td>The guest's seat: the product's own words</td></tr>
+      <tr><th scope="row">Colour</th><td>Sumac burgundy, rosewater, bone</td><td>Aluminium grey, anthracite, one orange signal</td><td>Cobalt, midnight, white, sunlight yellow</td></tr>
+      <tr><th scope="row">Type</th><td>Spectral, a light serif, with Ysabeau Office</td><td>Sofia Sans Condensed with Sofia Sans</td><td>Epilogue, heavy and tight</td></tr>
+      <tr><th scope="row">Imagery</th><td>Rooms and laid tables in full colour</td><td>Original diagrams; a few monochrome photographs</td><td>Daylight scenes, blue until the order is ready</td></tr>
+      <tr><th scope="row">Leads with</th><td>Pay at Table</td><td>Both products, as one platform</td><td>Order Pager</td></tr>
+      <tr><th scope="row">The demo is staged as</th><td>A private showing: the guest and the house, side by side</td><td>A workbench: board, wire, lifecycle track, event log</td><td>Two scenes: at the counter, then at the table</td></tr>
+      <tr><th scope="row">Documents</th><td>House papers</td><td>The dossier</td><td>Blue, then colour</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="notes">
+  <div>
+    <h2>The same in all three</h2>
+    <ul>
+      <li>One set of verified facts. Nothing is claimed that Payli cannot show: no customers, testimonials, statistics, prices or partner logos.</li>
+      <li>One demo engine with two scenarios. Order Pager: the restaurant presses Start and Ready &amp; ring, and the phone follows. Pay at Table: the guest splits, tips and pays, and the floor follows. It runs in the browser on sample data.</li>
+      <li>Honest status on every page: Pay at Table and the dashboard are in closed beta in Amman; the Order Pager is in development and not yet live at any venue.</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Earlier rounds</h2>
+    <p>Nothing was removed. Rounds 1 and 2 (themes 01 to 10) are where they were: <a href="../index.html">open the earlier design directions</a>, or <a href="../compare.html">compare the round 2 themes side by side</a>.</p>
+    <p>How Round 3 was made, what was verified and what is still open is recorded in the project's <code>round-3</code> folder.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>Payli is in closed beta in Amman, Jordan. No restaurant is live yet. Order Pager is in development and not yet live at any venue.</p>
+  <p>The demos are illustrative and run in your browser on sample data. Cedar &amp; Sage is a fictional venue used for illustration.</p>
+  <p>Concept presentation for internal review. © 2026 Payli</p>
+</footer>
+</body>
+</html>
